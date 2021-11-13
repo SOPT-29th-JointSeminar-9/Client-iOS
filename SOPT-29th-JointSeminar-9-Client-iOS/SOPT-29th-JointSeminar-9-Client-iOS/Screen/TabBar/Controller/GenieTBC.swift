@@ -9,6 +9,8 @@ import UIKit
 
 class GenieTBC: UITabBarController {
     
+    private static let tabBarSubViewTag = 1314
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBar()
@@ -56,31 +58,28 @@ extension GenieTBC {
         
         for subview in self.tabBar.subviews {
             
-            if let subview = subview as? UIView {
-                
-                if subview.tag == 1314 {
-                    subview.removeFromSuperview()
-                    break
-                }
+            if subview.tag == GenieTBC.tabBarSubViewTag {
+                subview.removeFromSuperview()
+                break
             }
         }
         
         let dotRadius: CGFloat = 3
         let dotDiameter = dotRadius * 2
         
-        let TopMargin:CGFloat = 7
+        let topMargin:CGFloat = 7
         
-        let TabBarItemCount = CGFloat(self.tabBar.items!.count)
+        let tabBarItemCount = CGFloat(self.tabBar.items!.count)
         
-        let HalfItemWidth = view.bounds.width / (TabBarItemCount * 2)
+        let halfItemWidth = view.bounds.width / (tabBarItemCount * 2)
         
-        let xOffset = HalfItemWidth * CGFloat(index * 2 + 1) - 5
+        let xOffset = halfItemWidth * CGFloat(index * 2 + 1) - 5
         
-        let imageHalfWidth: CGFloat = (self.tabBar.items![index] ).selectedImage?.size.width ?? 0 / 2
+        let imageHalfWidth: CGFloat = (self.tabBar.items![index]).selectedImage?.size.width ?? 0 / 2
         
-        let dot = UIView(frame: CGRect(x: xOffset + imageHalfWidth, y: TopMargin, width: dotDiameter, height: dotDiameter))
+        let dot = UIView(frame: CGRect(x: xOffset + imageHalfWidth, y: topMargin, width: dotDiameter, height: dotDiameter))
         
-        dot.tag = 1314
+        dot.tag = GenieTBC.tabBarSubViewTag
         dot.backgroundColor = UIColor.main
         dot.layer.cornerRadius = dotRadius
         
