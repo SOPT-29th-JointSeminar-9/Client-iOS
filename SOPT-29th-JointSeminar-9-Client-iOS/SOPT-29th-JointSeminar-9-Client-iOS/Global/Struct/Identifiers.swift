@@ -9,7 +9,14 @@ import Foundation
 struct Identifiers {
     //MARK: - Storyboard
     static let mainSB = "Main"
+    static let menuSB = "Menu"
+    static let chatSB = "Chat"
     
     //MARK: - Controller
-    static let mainVC = "ViewController"
+    static let homeVC = "HomeVC"
+    static let heartVC = "HeartVC"
+    static let searchVC = "SearchVC"
+    static let folderVC = "FolderVC"
+    static let menuVC = "MenuVC"
+    static let chatVC = "ChatVC"
 }
