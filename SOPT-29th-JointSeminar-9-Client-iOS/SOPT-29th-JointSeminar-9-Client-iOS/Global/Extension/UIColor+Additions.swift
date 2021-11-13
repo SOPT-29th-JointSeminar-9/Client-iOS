@@ -8,9 +8,41 @@
 import UIKit
 
 extension UIColor {
-    // 제플린에서 컬러셋 넘어오면 추가로 변경할게요!@!~
-    
-    @nonobjc class var blueyGrey: UIColor {
-        return UIColor(red: 69.0 / 255.0, green: 69.0 / 255.0, blue: 69.0 / 255.0, alpha: 1.0)
-    }
+
+  @nonobjc class var main: UIColor {
+    return UIColor(red: 61.0 / 255.0, green: 150.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var white: UIColor {
+    return UIColor(red: 254.0 / 255.0, green: 1.0, blue: 1.0, alpha: 1.0)
+  }
+
+  @nonobjc class var gray1: UIColor {
+    return UIColor(white: 245.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var gray2: UIColor {
+    return UIColor(white: 188.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var black: UIColor {
+    return UIColor(white: 0.0, alpha: 1.0)
+  }
+
+  @nonobjc class var gray5: UIColor {
+    return UIColor(white: 74.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var copySub2: UIColor {
+    return UIColor(red: 150.0 / 255.0, green: 149.0 / 255.0, blue: 147.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var gray6: UIColor {
+    return UIColor(white: 250.0 / 255.0, alpha: 1.0)
+  }
+
+  @nonobjc class var gray3: UIColor {
+    return UIColor(red: 138.0 / 255.0, green: 138.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0)
+  }
+
 }
