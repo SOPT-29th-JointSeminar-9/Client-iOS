@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-
+            
             //rootVC를 tabBar로 지정
-            window.rootViewController = TBC()
+            window.rootViewController = GenieTBC()
 
             self.window = window
             window.makeKeyAndVisible()
