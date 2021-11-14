@@ -9,7 +9,7 @@ import UIKit
 
 class GenieTBC: UITabBarController {
     
-    private static let tabBarSubViewTag = 1314
+    private let tabBarSubViewTag = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ extension GenieTBC {
         
         for subview in self.tabBar.subviews {
             
-            if subview.tag == GenieTBC.tabBarSubViewTag {
+            if subview.tag == tabBarSubViewTag {
                 subview.removeFromSuperview()
                 break
             }
@@ -79,7 +79,7 @@ extension GenieTBC {
         
         let dot = UIView(frame: CGRect(x: xOffset + imageHalfWidth, y: topMargin, width: dotDiameter, height: dotDiameter))
         
-        dot.tag = GenieTBC.tabBarSubViewTag
+        dot.tag = tabBarSubViewTag
         dot.backgroundColor = UIColor.main
         dot.layer.cornerRadius = dotRadius
         
