@@ -8,20 +8,25 @@
 import UIKit
 
 class ChatVC: UIViewController {
-
+    
+    private var bottomMusicView: BottomMusicBarView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configureLayout() {
+        guard let chatMusicPlayerVC = storyboard?.instantiateViewController(withIdentifier: Identifiers.chatMusicBottomVC) as? ChatMusicBottomVC else { return }
+        
+        addChild(chatMusicPlayerVC)
+        chatMusicPlayerVC.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(chatMusicPlayerVC.view)
+        
+        chatMusicPlayerVC.view.snp.makeConstraints {
+            $0.top.equalTo(self.view).offset(180)
+            $0.leading.trailing.bottom.equalTo(self.view)
+        }
+        chatMusicPlayerVC.didMove(toParent: self)
     }
 }

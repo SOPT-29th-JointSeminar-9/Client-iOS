@@ -21,7 +21,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="131"/>
+            <point key="canvasLocation" x="100.00000000000001" y="130.58035714285714"/>
+        </scene>
+        <!--Chat Music BottomVC-->
+        <scene sceneID="HnN-sl-xzh">
+            <objects>
+                <viewController storyboardIdentifier="ChatMusicBottomVC" id="yB5-eb-T2A" customClass="ChatMusicBottomVC" customModule="SOPT_29th_JointSeminar_9_Client_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YA7-uT-NuH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ECP-Tb-ftP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="70"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBN-N4-TZl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="-146"/>
         </scene>
     </scenes>
     <resources>
