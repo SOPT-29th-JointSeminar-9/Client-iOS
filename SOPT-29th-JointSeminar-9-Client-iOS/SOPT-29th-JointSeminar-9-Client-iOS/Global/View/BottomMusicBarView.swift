@@ -19,7 +19,7 @@ class BottomMusicBarView: UIView {
     // MARK: Properties
     private var albumCoverImageView = UIImageView().then {
         $0.image = UIImage(named: "chatImgMusic")
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
     }
     
     private var musicTitleLabel = UILabel().then {
@@ -44,7 +44,7 @@ class BottomMusicBarView: UIView {
     private var playPauseMusicBtn = UIButton().then {
         $0.isSelected = false
         $0.setBackgroundImage(UIImage(named: "mainIcPause"), for: .normal)
-        $0.setBackgroundImage(UIImage(named: "mainIcPrevious"), for: .selected)
+        $0.setBackgroundImage(UIImage(named: "mainIcPlay"), for: .selected)
         $0.addTarget(self, action: #selector(playPauseMusicBtnDidTap), for: .touchUpInside)
     }
     
@@ -163,6 +163,7 @@ extension BottomMusicBarView {
         playPauseMusicBtn.snp.makeConstraints {
             $0.trailing.equalTo(playlistBtn.snp.leading).offset(-26)
             $0.height.equalTo(20)
+            $0.width.equalTo(18)
             $0.centerY.equalTo(self)
         }
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */; };
 		330FF2812740223700E685BC /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FF2802740223700E685BC /* HeartVC.swift */; };
 		337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961DF273E2B7B00E2AD02 /* AppDelegate.swift */; };
 		337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961E1273E2B7B00E2AD02 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMusicBottomVC.swift; sourceTree = "<group>"; };
 		330FF2802740223700E685BC /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
 		337961DC273E2B7B00E2AD02 /* SOPT-29th-JointSeminar-9-Client-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar-9-Client-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337961DF273E2B7B00E2AD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,7 +180,6 @@
 		337961F6273E2CFD00E2AD02 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33C0A28D2741606000B6687D /* bottomMusicBarView */,
 				33C0A28E2741616400B6687D /* BottomMusicBarView.swift */,
 			);
 			path = View;
@@ -354,16 +355,10 @@
 		33C0A26A2740242F00B6687D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */,
 				33C0A2732740247D00B6687D /* ChatVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		33C0A28D2741606000B6687D /* bottomMusicBarView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = bottomMusicBarView;
 			sourceTree = "<group>";
 		};
 		FBB296CDAF9E3EDAF1193677 /* Frameworks */ = {
@@ -516,6 +511,7 @@
 				330FF2812740223700E685BC /* HeartVC.swift in Sources */,
 				33796208273E2F0200E2AD02 /* UIView+.swift in Sources */,
 				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
+				33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */,
 				3379621C273E31F600E2AD02 /* GenericResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
