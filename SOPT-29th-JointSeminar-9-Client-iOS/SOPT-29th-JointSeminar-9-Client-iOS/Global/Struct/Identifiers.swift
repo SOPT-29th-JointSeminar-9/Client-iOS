@@ -19,4 +19,8 @@ struct Identifiers {
     static let folderVC = "FolderVC"
     static let menuVC = "MenuVC"
     static let chatVC = "ChatVC"
+    static let chatMusicBottomVC = "ChatMusicBottomVC"
+    
+    //MARK: - UIView
+    static let bottomMusicBarView = "BottomMusicBarView"
 }

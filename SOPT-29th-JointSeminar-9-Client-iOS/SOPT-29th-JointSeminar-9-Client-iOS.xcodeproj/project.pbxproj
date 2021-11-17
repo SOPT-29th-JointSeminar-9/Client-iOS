@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */; };
 		330FF2812740223700E685BC /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FF2802740223700E685BC /* HeartVC.swift */; };
 		337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961DF273E2B7B00E2AD02 /* AppDelegate.swift */; };
 		337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961E1273E2B7B00E2AD02 /* SceneDelegate.swift */; };
@@ -36,11 +37,13 @@
 		33C0A2882740400D00B6687D /* AppleSDGothicNeoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A28527403EF600B6687D /* AppleSDGothicNeoM.ttf */; };
 		33C0A2892740400F00B6687D /* AppleSDGothicNeoR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A28427403EF500B6687D /* AppleSDGothicNeoR.ttf */; };
 		33C0A28A2740401200B6687D /* AppleSDGothicNeoSB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A28627403EF600B6687D /* AppleSDGothicNeoSB.ttf */; };
-		33C0A28C2740409600B6687D /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A28B2740409600B6687D /* view.swift */; };
+		33C0A28F2741616400B6687D /* BottomMusicBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A28E2741616400B6687D /* BottomMusicBarView.swift */; };
+		33C0A291274162C600B6687D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A290274162C600B6687D /* UILabel+.swift */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMusicBottomVC.swift; sourceTree = "<group>"; };
 		330FF2802740223700E685BC /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
 		337961DC273E2B7B00E2AD02 /* SOPT-29th-JointSeminar-9-Client-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar-9-Client-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337961DF273E2B7B00E2AD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +75,8 @@
 		33C0A28427403EF500B6687D /* AppleSDGothicNeoR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR.ttf; sourceTree = "<group>"; };
 		33C0A28527403EF600B6687D /* AppleSDGothicNeoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM.ttf; sourceTree = "<group>"; };
 		33C0A28627403EF600B6687D /* AppleSDGothicNeoSB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB.ttf; sourceTree = "<group>"; };
-		33C0A28B2740409600B6687D /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
+		33C0A28E2741616400B6687D /* BottomMusicBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMusicBarView.swift; sourceTree = "<group>"; };
+		33C0A290274162C600B6687D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		51E623193C17899D80F03F05 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +180,7 @@
 		337961F6273E2CFD00E2AD02 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33C0A28B2740409600B6687D /* view.swift */,
+				33C0A28E2741616400B6687D /* BottomMusicBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +192,7 @@
 				33796207273E2F0200E2AD02 /* UIView+.swift */,
 				33C0A27D2740357300B6687D /* UITabBarController+.swift */,
 				33C0A27F2740396500B6687D /* UIFont+.swift */,
+				33C0A290274162C600B6687D /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 		33C0A26A2740242F00B6687D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */,
 				33C0A2732740247D00B6687D /* ChatVC.swift */,
 			);
 			path = Controller;
@@ -484,14 +490,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C0A28F2741616400B6687D /* BottomMusicBarView.swift in Sources */,
 				33C0A2802740396500B6687D /* UIFont+.swift in Sources */,
-				33C0A28C2740409600B6687D /* view.swift in Sources */,
 				337961E4273E2B7B00E2AD02 /* HomeVC.swift in Sources */,
 				33796218273E31A600E2AD02 /* APIConstants.swift in Sources */,
 				33796206273E2EB600E2AD02 /* UIColor+Additions.swift in Sources */,
 				33C0A26E2740245300B6687D /* a.swift in Sources */,
 				33C0A2742740247D00B6687D /* ChatVC.swift in Sources */,
 				3379621A273E31D500E2AD02 /* NetworkResult.swift in Sources */,
+				33C0A291274162C600B6687D /* UILabel+.swift in Sources */,
 				33C0A26C2740244300B6687D /* MenuVC.swift in Sources */,
 				33796210273E302F00E2AD02 /* GenieTBC.swift in Sources */,
 				337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */,
@@ -504,6 +511,7 @@
 				330FF2812740223700E685BC /* HeartVC.swift in Sources */,
 				33796208273E2F0200E2AD02 /* UIView+.swift in Sources */,
 				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
+				33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */,
 				3379621C273E31F600E2AD02 /* GenericResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,16 @@ import UIKit
 class GenieTBC: UITabBarController {
     
     private let tabBarSubViewTag = 1
+    private var bottomMusicView: BottomMusicBarView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initBottomMusicView()
         setTabBar()
         addDotAtTabBarItemIndex(index: 0)
+        configureLayout()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        bottomMusicView?.addGestureRecognizer(tap)
     }
     
     // MARK: tabBar didSelect 함수
@@ -51,7 +56,24 @@ class GenieTBC: UITabBarController {
         
     }
 }
-
+//MARK: - Layout
+extension GenieTBC {
+    // MARK: BottomMusicView init 함수
+    func initBottomMusicView() {
+        bottomMusicView = BottomMusicBarView(frame: self.view.frame, state: .normal)
+    }
+    
+    // MARK: BottomMusicView Layout 구성
+    func configureLayout() {
+        self.view.insertSubview(bottomMusicView ?? UIView(), aboveSubview: tabBar)
+        bottomMusicView?.snp.makeConstraints {
+            $0.leading.trailing.equalTo(self.view).offset(0)
+            $0.bottom.equalTo(tabBar.snp.top).offset(0)
+            $0.height.equalTo(70)
+        }
+    }
+}
+//MARK: - Custom Func
 extension GenieTBC {
     // MARK: tabBarItem에 dot 추가하는 함수
     func addDotAtTabBarItemIndex(index: Int) {
@@ -84,5 +106,17 @@ extension GenieTBC {
         dot.layer.cornerRadius = dotRadius
         
         self.tabBar.addSubview(dot)
+    }
+    
+    //MARK: BottomMusicBarView에 Tap Gesture 발생 시 실행되는 함수
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+    
+        // MusicPlayerVC로 이동하게끔 코드 변경 필요
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: Identifiers.heartVC) as? HeartVC else { return }
+        
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
