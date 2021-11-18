@@ -39,6 +39,8 @@
 		33C0A28A2740401200B6687D /* AppleSDGothicNeoSB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A28627403EF600B6687D /* AppleSDGothicNeoSB.ttf */; };
 		33C0A28F2741616400B6687D /* BottomMusicBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A28E2741616400B6687D /* BottomMusicBarView.swift */; };
 		33C0A291274162C600B6687D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A290274162C600B6687D /* UILabel+.swift */; };
+		6F0D90232745EB83004ACC8B /* MenuNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D90222745EB83004ACC8B /* MenuNVC.swift */; };
+		6F5DEBA0274573A0000A3E8A /* MusicHugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5DEB9F274573A0000A3E8A /* MusicHugVC.swift */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		33C0A290274162C600B6687D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		51E623193C17899D80F03F05 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0D90222745EB83004ACC8B /* MenuNVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuNVC.swift; path = "../../../../../../../../../Client-iOS/SOPT-29th-JointSeminar-9-Client-iOS/SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Controller/MenuNVC.swift"; sourceTree = "<group>"; };
+		6F5DEB9F274573A0000A3E8A /* MusicHugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicHugVC.swift; sourceTree = "<group>"; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				33C0A26B2740244300B6687D /* MenuVC.swift */,
+				6F0D90222745EB83004ACC8B /* MenuNVC.swift */,
+				6F5DEB9F274573A0000A3E8A /* MusicHugVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,8 +513,10 @@
 				33C0A27E2740357300B6687D /* UITabBarController+.swift in Sources */,
 				337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */,
 				3379620B273E2F5F00E2AD02 /* Identifiers.swift in Sources */,
+				6F5DEBA0274573A0000A3E8A /* MusicHugVC.swift in Sources */,
 				33796216273E314C00E2AD02 /* Class.swift in Sources */,
 				330FF2812740223700E685BC /* HeartVC.swift in Sources */,
+				6F0D90232745EB83004ACC8B /* MenuNVC.swift in Sources */,
 				33796208273E2F0200E2AD02 /* UIView+.swift in Sources */,
 				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
 				33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */,
