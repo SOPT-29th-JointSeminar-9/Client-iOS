@@ -36,7 +36,7 @@ class MusicHugNaviBarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureLayout()
-        self.backgroundColor = .chatGray
+        self.backgroundColor = .chatBackgroundGray
     }
     
     required init?(coder: NSCoder) {
