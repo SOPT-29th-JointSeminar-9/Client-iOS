@@ -30,7 +30,7 @@ var musicHugChatData :[MessageData] = [
     MessageData(chatType: .music, albumCoverImageName: "chatImgMusic", messageText: "♫ '춤의왕_차세대' \n재생됩니다. ", profileImageName: "", nickname: "", sendTime: "오후 07:57"),
     MessageData(chatType: .counterpart, albumCoverImageName: "", messageText: "안녕하세요", profileImageName: "chatImgProfile", nickname: "mezinee", sendTime: "오후 07:57"),
     MessageData(chatType: .me, albumCoverImageName: "", messageText: "반갑습니다!!!", profileImageName: "", nickname: "", sendTime: "오후 07:58"),
-    MessageData(chatType: .counterpart, albumCoverImageName: "", messageText: "노래가 정말 좋네요!! 가나다라마바사 가나다라마바사 아자차카타파하~~", profileImageName: "chatImgProfile", nickname: "mezinee", sendTime: "오후 07:59"),
+    MessageData(chatType: .counterpart, albumCoverImageName: "", messageText: "들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요 ㅎㅎ들어주셔서 감사해요들어주셔서 감사해요", profileImageName: "chatImgProfile", nickname: "mezinee", sendTime: "오후 07:59"),
     MessageData(chatType: .me, albumCoverImageName: "", messageText: "들어주셔서 감사해요 ㅎㅎ", profileImageName: "", nickname: "", sendTime: "오후 07:59"),
     MessageData(chatType: .me, albumCoverImageName: "", messageText: "들어주셔서 감사해요 ㅎㅎ", profileImageName: "", nickname: "", sendTime: "오후 07:59"),
     MessageData(chatType: .me, albumCoverImageName: "", messageText: "들어주셔서 감사해요 ㅎㅎ", profileImageName: "", nickname: "", sendTime: "오후 07:59")
