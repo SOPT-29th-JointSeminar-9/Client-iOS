@@ -76,7 +76,7 @@ extension MenuPageCVC: UITableViewDelegate {
         case 0: //Popular
             return 390
         case 1: //Button
-            return 100
+            return 60
         case 2: //New
             return 390
         default:
