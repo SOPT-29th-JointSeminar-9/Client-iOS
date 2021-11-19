@@ -16,8 +16,8 @@ struct ContentData {
     let artist: String
     let description: String
     let DJname: String
-    let fans: Int
-    let listeners: Int
+    let fans: String
+    let listeners: String
     let imgName: String
     
     func makeImage() -> UIImage? {
