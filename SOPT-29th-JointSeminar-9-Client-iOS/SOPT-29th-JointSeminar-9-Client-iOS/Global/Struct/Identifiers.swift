@@ -20,6 +20,8 @@ struct Identifiers {
     static let menuVC = "MenuVC"
     static let chatVC = "ChatVC"
     static let chatMusicBottomVC = "ChatMusicBottomVC"
+    static let musicHugVC = "MusicHugVC"
+    static let menuNVC = "MenuNVC"
     
     //MARK: - UIView
     static let bottomMusicBarView = "BottomMusicBarView"

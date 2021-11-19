@@ -42,7 +42,7 @@ class GenieTBC: UITabBarController {
               let heartTab = makeTabVC(storyboardName: "Main", identifier: Identifiers.heartVC, vcName: HeartVC(), tabBarTitle: "For You", tabBarImage: "heart_unselected", tabBarSelectedImage: "heart"),
               let searchTab = makeTabVC(storyboardName: "Main", identifier: Identifiers.searchVC, vcName: SearchVC(), tabBarTitle: "검색", tabBarImage: "search_unselected", tabBarSelectedImage: "search"),
               let folderTab = makeTabVC(storyboardName: "Main", identifier: Identifiers.folderVC, vcName: FolderVC(), tabBarTitle: "내음악", tabBarImage: "folder_unselected", tabBarSelectedImage: "folder"),
-              let menuTab = makeTabVC(storyboardName: "Menu", identifier: Identifiers.menuVC, vcName: MenuVC(), tabBarTitle: "전체메뉴", tabBarImage: "menu_unselected", tabBarSelectedImage: "menu") else { return }
+              let menuTab = makeTabVC(storyboardName: "Menu", identifier: Identifiers.menuNVC, vcName: MenuNVC(), tabBarTitle: "전체메뉴", tabBarImage: "menu_unselected", tabBarSelectedImage: "menu") else { return }
         
         // 탭바 스타일 설정
         tabBar.frame.size.height = 54
