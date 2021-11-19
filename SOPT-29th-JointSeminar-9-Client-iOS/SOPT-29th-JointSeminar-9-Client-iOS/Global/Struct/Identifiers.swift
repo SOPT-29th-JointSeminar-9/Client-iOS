@@ -19,4 +19,10 @@ struct Identifiers {
     static let folderVC = "FolderVC"
     static let menuVC = "MenuVC"
     static let chatVC = "ChatVC"
+    
+    //MARK: - Cell
+    static let chatHeaderCVC = "ChatHeaderCVC"
+    static let counterpartChatCVC = "CounterpartChatCVC"
+    static let musicPlayChatCVC = "MusicPlayChatCVC"
+    static let mychatCVC = "MyChatCVC"
 }
