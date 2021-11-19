@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,10 +16,30 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="391" height="540"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FPS-uw-bem">
+                        <rect key="frame" x="0.0" y="0.0" width="391" height="540"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FPS-uw-bem" secondAttribute="bottom" id="jw1-Vw-xi3"/>
+                <constraint firstAttribute="trailing" secondItem="FPS-uw-bem" secondAttribute="trailing" id="pIR-OE-XOx"/>
+                <constraint firstItem="FPS-uw-bem" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ryi-er-bds"/>
+                <constraint firstItem="FPS-uw-bem" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xdo-w0-Cgv"/>
+            </constraints>
             <size key="customSize" width="391" height="540"/>
+            <connections>
+                <outlet property="tableView" destination="FPS-uw-bem" id="jzO-Bp-xng"/>
+            </connections>
             <point key="canvasLocation" x="383.33333333333337" y="254.46428571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

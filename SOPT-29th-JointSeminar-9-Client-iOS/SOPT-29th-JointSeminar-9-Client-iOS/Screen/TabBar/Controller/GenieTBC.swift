@@ -48,7 +48,6 @@ class GenieTBC: UITabBarController {
         tabBar.frame.size.height = 54
         tabBar.tintColor = .black
         
-        
         let tabs =  [homeTab, heartTab, searchTab, folderTab, menuTab]
         
         // VC에 루트로 설정
