@@ -44,6 +44,7 @@
 		33F15AC92744BB1900B898E4 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15AC82744BB1900B898E4 /* String+.swift */; };
 		33F15ACD274631AB00B898E4 /* BottomTextingAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */; };
 		33F15AD02746970800B898E4 /* ChatHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */; };
+		33F15ADB27478EDB00B898E4 /* BasePaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		33F15AC82744BB1900B898E4 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextingAreaView.swift; sourceTree = "<group>"; };
 		33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderCVC.swift; sourceTree = "<group>"; };
+		33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePaddingLabel.swift; sourceTree = "<group>"; };
 		51E623193C17899D80F03F05 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				33F15AC42744AEC500B898E4 /* BaseCell.swift */,
+				33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				33796218273E31A600E2AD02 /* APIConstants.swift in Sources */,
 				33F15AD02746970800B898E4 /* ChatHeaderCVC.swift in Sources */,
 				33796206273E2EB600E2AD02 /* UIColor+Additions.swift in Sources */,
+				33F15ADB27478EDB00B898E4 /* BasePaddingLabel.swift in Sources */,
 				33C0A26E2740245300B6687D /* a.swift in Sources */,
 				33C0A2742740247D00B6687D /* ChatVC.swift in Sources */,
 				33F15ACD274631AB00B898E4 /* BottomTextingAreaView.swift in Sources */,
