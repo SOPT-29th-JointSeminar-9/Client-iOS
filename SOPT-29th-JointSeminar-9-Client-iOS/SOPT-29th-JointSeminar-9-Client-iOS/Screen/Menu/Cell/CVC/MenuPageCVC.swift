@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol CVCellDelegate {
+    func touchUpToGoCreate(_ index: Int)
+}
+
 class MenuPageCVC: UICollectionViewCell {
     
     private let sections: [String] = ["실시간 인기", "최신"]
+    var delegate: CVCellDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,7 +53,7 @@ extension MenuPageCVC: UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.popularMenuTVC) as? PopularMenuTVC else { return UITableViewCell() }
                 return cell
             case 1: //Button
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC) as? ButtonTVC else { return UITableViewCell() }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC, for: indexPath) as? ButtonTVC else {return UITableViewCell() }
                 return cell
             default:
                 return UITableViewCell()
@@ -71,6 +76,11 @@ extension MenuPageCVC: UITableViewDataSource {
 }
 
 extension MenuPageCVC: UITableViewDelegate {
+    func tableView(_ tableview: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.touchUpToGoCreate(indexPath.item)
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0: //Popular
@@ -112,5 +122,4 @@ extension MenuPageCVC: UITableViewDelegate {
             scrollView.contentInset = UIEdgeInsets(top: -scrollHeaderHeight, left: 0, bottom: 0, right: 0)
         }
     }
-    
 }

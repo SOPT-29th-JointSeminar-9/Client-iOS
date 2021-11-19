@@ -22,6 +22,7 @@ struct Identifiers {
     static let chatMusicBottomVC = "ChatMusicBottomVC"
     static let musicHugVC = "MusicHugVC"
     static let menuNVC = "MenuNVC"
+    static let popUpVC = "PopUpVC"
 
     //MARK: - Cell
     static let menuCVC = "MenuCVC"

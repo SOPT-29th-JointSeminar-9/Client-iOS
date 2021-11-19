@@ -52,6 +52,8 @@
 		6F88B6B727477D1100EA9085 /* ButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F88B6B527477D1100EA9085 /* ButtonTVC.swift */; };
 		6F88B6BA27477D6D00EA9085 /* PopularMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F88B6B827477D6D00EA9085 /* PopularMenuTVC.swift */; };
 		6F88B6BB27477D6D00EA9085 /* PopularMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F88B6B927477D6D00EA9085 /* PopularMenuTVC.xib */; };
+		6F88B6BD27480D6500EA9085 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F88B6BC27480D6500EA9085 /* PopUp.storyboard */; };
+		6F88B6BF27480D7B00EA9085 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F88B6BE27480D7B00EA9085 /* PopUpVC.swift */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		6F88B6B527477D1100EA9085 /* ButtonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTVC.swift; sourceTree = "<group>"; };
 		6F88B6B827477D6D00EA9085 /* PopularMenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularMenuTVC.swift; sourceTree = "<group>"; };
 		6F88B6B927477D6D00EA9085 /* PopularMenuTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularMenuTVC.xib; sourceTree = "<group>"; };
+		6F88B6BC27480D6500EA9085 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = PopUp.storyboard; path = "SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Storyboard/PopUp.storyboard"; sourceTree = SOURCE_ROOT; };
+		6F88B6BE27480D7B00EA9085 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				33C0A262274023DA00B6687D /* Menu.storyboard */,
+				6F88B6BC27480D6500EA9085 /* PopUp.storyboard */,
+				6F88B6BE27480D7B00EA9085 /* PopUpVC.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				6F88B6BB27477D6D00EA9085 /* PopularMenuTVC.xib in Resources */,
 				6F88B6B627477D1100EA9085 /* ButtonTVC.xib in Resources */,
 				6F0D904C27460B82004ACC8B /* MenuPageCVC.xib in Resources */,
+				6F88B6BD27480D6500EA9085 /* PopUp.storyboard in Resources */,
 				337961EC273E2B7E00E2AD02 /* LaunchScreen.storyboard in Resources */,
 				33C0A2882740400D00B6687D /* AppleSDGothicNeoM.ttf in Resources */,
 				337961E9273E2B7E00E2AD02 /* Assets.xcassets in Resources */,
@@ -555,6 +562,7 @@
 				6F88B6B727477D1100EA9085 /* ButtonTVC.swift in Sources */,
 				6F24CF2D2747020300B42952 /* PopularCVC.swift in Sources */,
 				6F88B6BA27477D6D00EA9085 /* PopularMenuTVC.swift in Sources */,
+				6F88B6BF27480D7B00EA9085 /* PopUpVC.swift in Sources */,
 				337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */,
 				3379620B273E2F5F00E2AD02 /* Identifiers.swift in Sources */,
 				33796216273E314C00E2AD02 /* Class.swift in Sources */,
