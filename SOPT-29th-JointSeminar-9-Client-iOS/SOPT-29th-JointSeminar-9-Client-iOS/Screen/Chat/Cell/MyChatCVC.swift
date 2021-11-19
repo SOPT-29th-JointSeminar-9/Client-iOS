@@ -16,11 +16,18 @@ class MyChatCVC: BaseCell {
         $0.backgroundColor = .main
     }
     
-    private var myTextLabel = UILabel().then {
+    private var myTextLabel = BasePaddingLabel().then {
         $0.font = UIFont.AppleSDGothicM(size: 14)
         $0.textColor = .white
         $0.textAlignment = .left
         //        $0.letterSpacing = -0.39
+        $0.paddingTop = 13
+        $0.paddingLeft = 23
+        $0.paddingRight = 23
+        $0.paddingBottom = 13
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.numberOfLines = 0
+        $0.lineBreakMode = .byWordWrapping
         $0.sizeToFit()
     }
     
@@ -52,22 +59,18 @@ extension MyChatCVC {
     func configureLayout() {
         self.addSubviews([chatBlueBackView, myTextLabel, sendTimeLabel])
         
-        chatBlueBackView.snp.makeConstraints {
-            let viewSize = myTextLabel.intrinsicContentSize
-            $0.top.equalTo(self.snp.top)
-            $0.trailing.equalTo(self.snp.trailing).offset(-17)
-            if viewSize.width + 46 > 216 {
-                $0.trailing.equalTo(self.snp.trailing).offset(-144)
-            }
-        }
-        
         myTextLabel.snp.makeConstraints {
-            $0.top.equalTo(chatBlueBackView.snp.top).offset(12)
-            $0.leading.equalTo(chatBlueBackView.snp.leading).offset(23)
-            $0.trailing.equalTo(chatBlueBackView.snp.trailing).offset(-23)
-            $0.bottom.equalTo(chatBlueBackView.snp.bottom).offset(-12)
+            $0.top.equalTo(self.snp.top).offset(0)
+            $0.trailing.equalTo(self.snp.trailing).offset(-23)
+            $0.width.lessThanOrEqualTo(220)
         }
         
+        chatBlueBackView.snp.makeConstraints {
+            $0.top.equalTo(myTextLabel.snp.top)
+            $0.leading.equalTo(myTextLabel.snp.leading)
+            $0.trailing.equalTo(myTextLabel.snp.trailing)
+            $0.bottom.equalTo(myTextLabel.snp.bottom)
+        }
         sendTimeLabel.snp.makeConstraints {
             $0.trailing.equalTo(chatBlueBackView.snp.leading).offset(-8)
             $0.bottom.equalTo(chatBlueBackView.snp.bottom).offset(0)

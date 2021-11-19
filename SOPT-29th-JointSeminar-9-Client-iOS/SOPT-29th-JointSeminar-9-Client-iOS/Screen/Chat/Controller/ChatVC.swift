@@ -21,7 +21,7 @@ class ChatVC: UIViewController {
         $0.showsHorizontalScrollIndicator = false
         $0.collectionViewLayout = layout
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
@@ -29,11 +29,13 @@ class ChatVC: UIViewController {
         configueLayout()
     }
     
+    // 대리자 위임
     func setupDelegate() {
         chatCV.delegate = self
         chatCV.dataSource = self
     }
     
+    // 셀 등록
     func registerCell() {
         self.chatCV.register(ChatHeaderCVC.self,
                              forCellWithReuseIdentifier: "ChatHeaderCVC")
@@ -88,7 +90,6 @@ extension ChatVC: UICollectionViewDataSource {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.musicPlayChatCVC, for: indexPath)
                 if let musicPlayChatCell = cell as? MusicPlayChatCVC {
                     musicPlayChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                    musicPlayChatCell.backgroundColor = .black
                 }
                 return cell
             }
@@ -98,7 +99,7 @@ extension ChatVC: UICollectionViewDataSource {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.counterpartChatCVC, for: indexPath)
                 if let counterpartChatCell = cell as? CounterpartChatCVC {
                     counterpartChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                    counterpartChatCell.backgroundColor = .yellow
+                    counterpartChatCell.couterpartTextLabel.adjustsFontSizeToFitWidth = true
                 }
                 return cell
                 
@@ -109,7 +110,6 @@ extension ChatVC: UICollectionViewDataSource {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.mychatCVC, for: indexPath)
                 if let myChatCell = cell as? MyChatCVC {
                     myChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                    myChatCell.backgroundColor = .systemPink
                 }
                 return cell
             }
@@ -129,12 +129,30 @@ extension ChatVC: UICollectionViewDelegateFlowLayout {
             return CGSize(width: self.view.frame.width, height: height + 40)
         }
         else if musicHugChatData[indexPath.row].chatType == .counterpart {
-            let height = musicHugChatData[indexPath.row].messageText.height(constraintedWidth: self.view.frame.width - 144, font: UIFont.AppleSDGothicM(size: 14))
-            return CGSize(width: self.view.frame.width, height: height + 70)
+            let height = heightForView(text: musicHugChatData[indexPath.row].messageText, font: UIFont.AppleSDGothicM(size: 14), width: 220)
+            
+            if height < 20 {
+                return CGSize(width: self.view.frame.width, height: height + 60)
+            }
+            else if height >= 20 && height < 40 {
+                return CGSize(width: self.view.frame.width, height: height + 80)
+            }
+            else {
+                return CGSize(width: self.view.frame.width, height: height + 100)
+            }
         }
         else if musicHugChatData[indexPath.row].chatType == .me {
-            let height = musicHugChatData[indexPath.row].messageText.height(constraintedWidth: self.view.frame.width, font: UIFont.AppleSDGothicR(size: 14))
-            return CGSize(width: self.view.frame.width, height: height + 24)
+            let height = heightForView(text: musicHugChatData[indexPath.row].messageText, font: UIFont.AppleSDGothicM(size: 14), width: 220)
+            
+            if height < 20 {
+                return CGSize(width: self.view.frame.width, height: height + 28)
+            }
+            else if height >= 20 && height < 40 {
+                return CGSize(width: self.view.frame.width, height: height + 80)
+            }
+            else {
+                return CGSize(width: self.view.frame.width, height: height + 100)
+            }
         }
         else {
             return CGSize(width: self.view.frame.width, height: self.view.frame.height)
@@ -142,3 +160,15 @@ extension ChatVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//MARK: - Custom Method
+extension ChatVC {
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
+}
