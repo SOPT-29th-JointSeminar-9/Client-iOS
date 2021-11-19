@@ -112,5 +112,4 @@ extension MenuPageCVC: UITableViewDelegate {
             scrollView.contentInset = UIEdgeInsets(top: -scrollHeaderHeight, left: 0, bottom: 0, right: 0)
         }
     }
-    
 }
