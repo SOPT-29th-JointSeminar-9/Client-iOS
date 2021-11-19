@@ -1,19 +1,19 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "chatImgMusic.png"
+      "filename" : "mainIcPrevious.png",
+      "idiom" : "universal"
     },
     {
-      "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "chatImgMusic@2x.png"
+      "filename" : "mainIcPrevious@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "chatImgMusic@3x.png"
+      "filename" : "mainIcPrevious@3x.png"
     }
   ],
   "info" : {

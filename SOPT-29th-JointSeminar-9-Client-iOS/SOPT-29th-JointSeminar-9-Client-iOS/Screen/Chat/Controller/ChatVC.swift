@@ -34,7 +34,7 @@ class ChatVC: UIViewController {
         chatCV.delegate = self
         chatCV.dataSource = self
     }
-    
+  
     // 셀 등록
     func registerCell() {
         self.chatCV.register(ChatHeaderCVC.self,

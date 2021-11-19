@@ -25,4 +25,16 @@ struct Identifiers {
     static let counterpartChatCVC = "CounterpartChatCVC"
     static let musicPlayChatCVC = "MusicPlayChatCVC"
     static let mychatCVC = "MyChatCVC"
+    static let chatMusicBottomVC = "ChatMusicBottomVC"
+    static let musicHugVC = "MusicHugVC"
+    static let menuNVC = "MenuNVC"
+    static let menuCVC = "MenuCVC"
+    static let menuPageCVC = "MenuPageCVC"
+    static let popularTVC = "PopularTVC"
+    static let popularCVC = "PopularCVC"
+    static let popularMenuTVC = "PopularMenuTVC"
+    static let buttonTVC = "ButtonTVC"
+    
+    //MARK: - View
+    static let bottomMusicBarView = "BottomMusicBarView"
 }

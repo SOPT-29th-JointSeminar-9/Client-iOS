@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */; };
 		330FF2812740223700E685BC /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FF2802740223700E685BC /* HeartVC.swift */; };
 		337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961DF273E2B7B00E2AD02 /* AppDelegate.swift */; };
 		337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337961E1273E2B7B00E2AD02 /* SceneDelegate.swift */; };
@@ -28,9 +29,6 @@
 		33C0A25C2740233300B6687D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A25B2740233300B6687D /* SearchVC.swift */; };
 		33C0A25F2740236200B6687D /* FolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A25E2740236200B6687D /* FolderVC.swift */; };
 		33C0A263274023DA00B6687D /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A262274023DA00B6687D /* Menu.storyboard */; };
-		33C0A26C2740244300B6687D /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A26B2740244300B6687D /* MenuVC.swift */; };
-		33C0A26E2740245300B6687D /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A26D2740245300B6687D /* a.swift */; };
-		33C0A2702740245C00B6687D /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A26F2740245C00B6687D /* b.swift */; };
 		33C0A2722740246D00B6687D /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A2712740246D00B6687D /* Chat.storyboard */; };
 		33C0A2742740247D00B6687D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A2732740247D00B6687D /* ChatVC.swift */; };
 		33C0A27E2740357300B6687D /* UITabBarController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A27D2740357300B6687D /* UITabBarController+.swift */; };
@@ -45,10 +43,29 @@
 		33F15ACD274631AB00B898E4 /* BottomTextingAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */; };
 		33F15AD02746970800B898E4 /* ChatHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */; };
 		33F15ADB27478EDB00B898E4 /* BasePaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */; };
+		33C0A28F2741616400B6687D /* BottomMusicBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A28E2741616400B6687D /* BottomMusicBarView.swift */; };
+		33C0A291274162C600B6687D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A290274162C600B6687D /* UILabel+.swift */; };
+		6F0D903127460066004ACC8B /* NSObject + reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D903027460066004ACC8B /* NSObject + reusableIdentifier.swift */; };
+		6F0D904B27460B82004ACC8B /* MenuCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D904527460B82004ACC8B /* MenuCVC.xib */; };
+		6F0D904C27460B82004ACC8B /* MenuPageCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0D904627460B82004ACC8B /* MenuPageCVC.xib */; };
+		6F0D904D27460B82004ACC8B /* MenuCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D904727460B82004ACC8B /* MenuCVC.swift */; };
+		6F0D904E27460B82004ACC8B /* MenuPageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0D904827460B82004ACC8B /* MenuPageCVC.swift */; };
+		6F24CF2D2747020300B42952 /* PopularCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24CF2B2747020300B42952 /* PopularCVC.swift */; };
+		6F24CF2E2747020300B42952 /* PopularCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F24CF2C2747020300B42952 /* PopularCVC.xib */; };
+		6F3A2BEA2746E6EC009528FE /* MenuNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A2BE62746E6EC009528FE /* MenuNVC.swift */; };
+		6F3A2BEB2746E6EC009528FE /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A2BE72746E6EC009528FE /* MenuVC.swift */; };
+		6F3A2BEC2746E6EC009528FE /* CustomMenuTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A2BE82746E6EC009528FE /* CustomMenuTabBar.swift */; };
+		6F3A2BED2746E6EC009528FE /* MusicHugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A2BE92746E6EC009528FE /* MusicHugVC.swift */; };
+		6F3A2BEF2746E853009528FE /* MenuContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3A2BEE2746E853009528FE /* MenuContentData.swift */; };
+		6F88B6AE2747303300EA9085 /* PopularMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F88B6AC2747303300EA9085 /* PopularMenuTVC.swift */; };
+		6F88B6AF2747303300EA9085 /* PopularMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F88B6AD2747303300EA9085 /* PopularMenuTVC.xib */; };
+		6FC0883C27472B2400323BE2 /* ButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC0883A27472B2400323BE2 /* ButtonTVC.swift */; };
+		6FC0883D27472B2400323BE2 /* ButtonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0883B27472B2400323BE2 /* ButtonTVC.xib */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMusicBottomVC.swift; sourceTree = "<group>"; };
 		330FF2802740223700E685BC /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
 		337961DC273E2B7B00E2AD02 /* SOPT-29th-JointSeminar-9-Client-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-29th-JointSeminar-9-Client-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		337961DF273E2B7B00E2AD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +89,6 @@
 		33C0A25B2740233300B6687D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		33C0A25E2740236200B6687D /* FolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderVC.swift; sourceTree = "<group>"; };
 		33C0A262274023DA00B6687D /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		33C0A26B2740244300B6687D /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		33C0A26D2740245300B6687D /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
-		33C0A26F2740245C00B6687D /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
 		33C0A2712740246D00B6687D /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		33C0A2732740247D00B6687D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		33C0A27D2740357300B6687D /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
@@ -89,8 +103,26 @@
 		33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextingAreaView.swift; sourceTree = "<group>"; };
 		33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderCVC.swift; sourceTree = "<group>"; };
 		33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePaddingLabel.swift; sourceTree = "<group>"; };
+		33C0A28E2741616400B6687D /* BottomMusicBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMusicBarView.swift; sourceTree = "<group>"; };
+		33C0A290274162C600B6687D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		51E623193C17899D80F03F05 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0D903027460066004ACC8B /* NSObject + reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + reusableIdentifier.swift"; sourceTree = "<group>"; };
+		6F0D904527460B82004ACC8B /* MenuCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCVC.xib; sourceTree = "<group>"; };
+		6F0D904627460B82004ACC8B /* MenuPageCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuPageCVC.xib; sourceTree = "<group>"; };
+		6F0D904727460B82004ACC8B /* MenuCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCVC.swift; sourceTree = "<group>"; };
+		6F0D904827460B82004ACC8B /* MenuPageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPageCVC.swift; sourceTree = "<group>"; };
+		6F24CF2B2747020300B42952 /* PopularCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopularCVC.swift; path = "SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Cell/CVC/PopularCVC.swift"; sourceTree = SOURCE_ROOT; };
+		6F24CF2C2747020300B42952 /* PopularCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PopularCVC.xib; path = "SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Cell/CVC/PopularCVC.xib"; sourceTree = SOURCE_ROOT; };
+		6F3A2BE62746E6EC009528FE /* MenuNVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuNVC.swift; sourceTree = "<group>"; };
+		6F3A2BE72746E6EC009528FE /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		6F3A2BE82746E6EC009528FE /* CustomMenuTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuTabBar.swift; sourceTree = "<group>"; };
+		6F3A2BE92746E6EC009528FE /* MusicHugVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicHugVC.swift; sourceTree = "<group>"; };
+		6F3A2BEE2746E853009528FE /* MenuContentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuContentData.swift; sourceTree = "<group>"; };
+		6F88B6AC2747303300EA9085 /* PopularMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopularMenuTVC.swift; path = "SOPT-29th-JointSeminar-9-Client-iOS/Support/PopularMenuTVC.swift"; sourceTree = SOURCE_ROOT; };
+		6F88B6AD2747303300EA9085 /* PopularMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PopularMenuTVC.xib; path = "SOPT-29th-JointSeminar-9-Client-iOS/Support/PopularMenuTVC.xib"; sourceTree = SOURCE_ROOT; };
+		6FC0883A27472B2400323BE2 /* ButtonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonTVC.swift; path = "SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Cell/CVC/ButtonTVC.swift"; sourceTree = SOURCE_ROOT; };
+		6FC0883B27472B2400323BE2 /* ButtonTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ButtonTVC.xib; path = "SOPT-29th-JointSeminar-9-Client-iOS/Screen/Menu/Cell/CVC/ButtonTVC.xib"; sourceTree = SOURCE_ROOT; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,9 +150,9 @@
 		330FF27F2740217800E685BC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				6F3A2BE52746E6EC009528FE /* Controller */,
+				6F0D904327460B82004ACC8B /* Cell */,
 				33C0A261274023CE00B6687D /* Storyboard */,
-				33C0A264274023E100B6687D /* Controller */,
-				33C0A265274023F100B6687D /* Cell */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -182,9 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				33C0A28327403EF500B6687D /* AppleSDGothicNeoB.ttf */,
+				33C0A28627403EF600B6687D /* AppleSDGothicNeoSB.ttf */,
 				33C0A28527403EF600B6687D /* AppleSDGothicNeoM.ttf */,
 				33C0A28427403EF500B6687D /* AppleSDGothicNeoR.ttf */,
-				33C0A28627403EF600B6687D /* AppleSDGothicNeoSB.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -194,6 +226,7 @@
 			children = (
 				33AADE342744355300D07748 /* MusicHugNaviBarView.swift */,
 				33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */,
+				33C0A28E2741616400B6687D /* BottomMusicBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,11 +234,13 @@
 		337961F7273E2D0600E2AD02 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				6F0D903027460066004ACC8B /* NSObject + reusableIdentifier.swift */,
 				33796205273E2EB600E2AD02 /* UIColor+Additions.swift */,
 				33796207273E2F0200E2AD02 /* UIView+.swift */,
 				33C0A27D2740357300B6687D /* UITabBarController+.swift */,
 				33C0A27F2740396500B6687D /* UIFont+.swift */,
 				33F15AC82744BB1900B898E4 /* String+.swift */,
+				33C0A290274162C600B6687D /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -277,6 +312,7 @@
 		33796209273E2F4E00E2AD02 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				6F3A2BEE2746E853009528FE /* MenuContentData.swift */,
 				3379620A273E2F5F00E2AD02 /* Identifiers.swift */,
 			);
 			path = Struct;
@@ -328,45 +364,11 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		33C0A264274023E100B6687D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				33C0A26B2740244300B6687D /* MenuVC.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		33C0A265274023F100B6687D /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				33C0A266274023FF00B6687D /* TVC */,
-				33C0A2672740240D00B6687D /* CVC */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		33C0A266274023FF00B6687D /* TVC */ = {
-			isa = PBXGroup;
-			children = (
-				33C0A26D2740245300B6687D /* a.swift */,
-			);
-			path = TVC;
-			sourceTree = "<group>";
-		};
-		33C0A2672740240D00B6687D /* CVC */ = {
-			isa = PBXGroup;
-			children = (
-				33C0A26F2740245C00B6687D /* b.swift */,
-			);
-			path = CVC;
-			sourceTree = "<group>";
-		};
 		33C0A2682740242200B6687D /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				33C0A2692740242B00B6687D /* Storyboard */,
 				33C0A26A2740242F00B6687D /* Controller */,
-				33AADE3627443CF300D07748 /* Cell */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -382,7 +384,55 @@
 		33C0A26A2740242F00B6687D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */,
 				33C0A2732740247D00B6687D /* ChatVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6F0D904327460B82004ACC8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6F0D904427460B82004ACC8B /* CVC */,
+				6F0D904927460B82004ACC8B /* TVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6F0D904427460B82004ACC8B /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				33C0A2692740242B00B6687D /* Storyboard */,
+				33C0A26A2740242F00B6687D /* Controller */,
+				33AADE3627443CF300D07748 /* Cell */,
+				6F0D904527460B82004ACC8B /* MenuCVC.xib */,
+				6F0D904727460B82004ACC8B /* MenuCVC.swift */,
+				6F0D904627460B82004ACC8B /* MenuPageCVC.xib */,
+				6F0D904827460B82004ACC8B /* MenuPageCVC.swift */,
+				6F24CF2B2747020300B42952 /* PopularCVC.swift */,
+				6F24CF2C2747020300B42952 /* PopularCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
+		6F0D904927460B82004ACC8B /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				6F88B6AC2747303300EA9085 /* PopularMenuTVC.swift */,
+				6F88B6AD2747303300EA9085 /* PopularMenuTVC.xib */,
+				6FC0883A27472B2400323BE2 /* ButtonTVC.swift */,
+				6FC0883B27472B2400323BE2 /* ButtonTVC.xib */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		6F3A2BE52746E6EC009528FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F3A2BE62746E6EC009528FE /* MenuNVC.swift */,
+				6F3A2BE72746E6EC009528FE /* MenuVC.swift */,
+				6F3A2BE82746E6EC009528FE /* CustomMenuTabBar.swift */,
+				6F3A2BE92746E6EC009528FE /* MusicHugVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,9 +506,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				33C0A28A2740401200B6687D /* AppleSDGothicNeoSB.ttf in Resources */,
+				6F0D904B27460B82004ACC8B /* MenuCVC.xib in Resources */,
+				6F88B6AF2747303300EA9085 /* PopularMenuTVC.xib in Resources */,
+				6F0D904C27460B82004ACC8B /* MenuPageCVC.xib in Resources */,
+				6FC0883D27472B2400323BE2 /* ButtonTVC.xib in Resources */,
 				337961EC273E2B7E00E2AD02 /* LaunchScreen.storyboard in Resources */,
 				33C0A2882740400D00B6687D /* AppleSDGothicNeoM.ttf in Resources */,
 				337961E9273E2B7E00E2AD02 /* Assets.xcassets in Resources */,
+				6F24CF2E2747020300B42952 /* PopularCVC.xib in Resources */,
 				33C0A2872740400A00B6687D /* AppleSDGothicNeoB.ttf in Resources */,
 				33C0A2892740400F00B6687D /* AppleSDGothicNeoR.ttf in Resources */,
 				337961E7273E2B7B00E2AD02 /* Main.storyboard in Resources */,
@@ -516,8 +571,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C0A28F2741616400B6687D /* BottomMusicBarView.swift in Sources */,
+				6F3A2BED2746E6EC009528FE /* MusicHugVC.swift in Sources */,
+				6F3A2BEB2746E6EC009528FE /* MenuVC.swift in Sources */,
 				33C0A2802740396500B6687D /* UIFont+.swift in Sources */,
 				337961E4273E2B7B00E2AD02 /* HomeVC.swift in Sources */,
+				6FC0883C27472B2400323BE2 /* ButtonTVC.swift in Sources */,
 				33796218273E31A600E2AD02 /* APIConstants.swift in Sources */,
 				33F15AD02746970800B898E4 /* ChatHeaderCVC.swift in Sources */,
 				33796206273E2EB600E2AD02 /* UIColor+Additions.swift in Sources */,
@@ -530,11 +589,19 @@
 				33C0A26C2740244300B6687D /* MenuVC.swift in Sources */,
 				33AADE3F27443D8C00D07748 /* MyChatCVC.swift in Sources */,
 				33F15AC92744BB1900B898E4 /* String+.swift in Sources */,
+				6F0D903127460066004ACC8B /* NSObject + reusableIdentifier.swift in Sources */,
+				6F3A2BEF2746E853009528FE /* MenuContentData.swift in Sources */,
+				33C0A2742740247D00B6687D /* ChatVC.swift in Sources */,
+				6F3A2BEA2746E6EC009528FE /* MenuNVC.swift in Sources */,
+				3379621A273E31D500E2AD02 /* NetworkResult.swift in Sources */,
+				6F3A2BEC2746E6EC009528FE /* CustomMenuTabBar.swift in Sources */,
+				33C0A291274162C600B6687D /* UILabel+.swift in Sources */,
 				33796210273E302F00E2AD02 /* GenieTBC.swift in Sources */,
 				337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */,
-				33C0A2702740245C00B6687D /* b.swift in Sources */,
 				33C0A25C2740233300B6687D /* SearchVC.swift in Sources */,
 				33C0A27E2740357300B6687D /* UITabBarController+.swift in Sources */,
+				6F24CF2D2747020300B42952 /* PopularCVC.swift in Sources */,
+				6F88B6AE2747303300EA9085 /* PopularMenuTVC.swift in Sources */,
 				337961E2273E2B7B00E2AD02 /* SceneDelegate.swift in Sources */,
 				3379620B273E2F5F00E2AD02 /* Identifiers.swift in Sources */,
 				33F15AC52744AEC500B898E4 /* BaseCell.swift in Sources */,
@@ -543,6 +610,10 @@
 				33AADE3D27443D6F00D07748 /* MusicPlayChatCVC.swift in Sources */,
 				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
 				33AADE352744355300D07748 /* MusicHugNaviBarView.swift in Sources */,
+				6F0D904D27460B82004ACC8B /* MenuCVC.swift in Sources */,
+				6F0D904E27460B82004ACC8B /* MenuPageCVC.swift in Sources */,
+				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
+				33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */,
 				3379621C273E31F600E2AD02 /* GenericResponse.swift in Sources */,
 				33F15AC72744B49F00B898E4 /* MessageData.swift in Sources */,
 			);
@@ -694,6 +765,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FAK98S72C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar-9-Client-iOS/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -722,6 +794,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FAK98S72C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar-9-Client-iOS/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
