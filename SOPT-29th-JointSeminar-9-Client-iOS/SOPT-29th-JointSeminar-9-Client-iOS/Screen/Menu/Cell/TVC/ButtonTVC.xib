@@ -24,6 +24,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="iosMainBtnCreate"/>
+                        <connections>
+                            <action selector="createBtnDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yAW-CW-avd"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

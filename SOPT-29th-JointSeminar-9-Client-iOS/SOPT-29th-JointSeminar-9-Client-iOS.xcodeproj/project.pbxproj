@@ -89,9 +89,6 @@
 		33796219273E31D500E2AD02 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		3379621B273E31F600E2AD02 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		33AADE342744355300D07748 /* MusicHugNaviBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHugNaviBarView.swift; sourceTree = "<group>"; };
-		33AADE3A27443D4A00D07748 /* CounterpartChatCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterpartChatCVC.swift; sourceTree = "<group>"; };
-		33AADE3C27443D6F00D07748 /* MusicPlayChatCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayChatCVC.swift; sourceTree = "<group>"; };
-		33AADE3E27443D8C00D07748 /* MyChatCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCVC.swift; sourceTree = "<group>"; };
 		33C0A25B2740233300B6687D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		33C0A25E2740236200B6687D /* FolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderVC.swift; sourceTree = "<group>"; };
 		33C0A262274023DA00B6687D /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -109,7 +106,6 @@
 		33F15AC62744B49F00B898E4 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		33F15AC82744BB1900B898E4 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		33F15ACC274631AB00B898E4 /* BottomTextingAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextingAreaView.swift; sourceTree = "<group>"; };
-		33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderCVC.swift; sourceTree = "<group>"; };
 		33F15ADA27478EDB00B898E4 /* BasePaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePaddingLabel.swift; sourceTree = "<group>"; };
 		51E623193C17899D80F03F05 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,17 +360,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		33AADE3627443CF300D07748 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				33F15ACE2746970800B898E4 /* ChatHeaderCVC.swift */,
-				33AADE3C27443D6F00D07748 /* MusicPlayChatCVC.swift */,
-				33AADE3A27443D4A00D07748 /* CounterpartChatCVC.swift */,
-				33AADE3E27443D8C00D07748 /* MyChatCVC.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		33C0A261274023CE00B6687D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,7 +409,6 @@
 		6F0D904427460B82004ACC8B /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				33AADE3627443CF300D07748 /* Cell */,
 				6F0D904527460B82004ACC8B /* MenuCVC.xib */,
 				6F0D904727460B82004ACC8B /* MenuCVC.swift */,
 				6F0D904627460B82004ACC8B /* MenuPageCVC.xib */,
@@ -785,7 +769,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZS26WP93H;
+				DEVELOPMENT_TEAM = 3FAK98S72C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar-9-Client-iOS/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -814,7 +798,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2ZS26WP93H;
+				DEVELOPMENT_TEAM = 3FAK98S72C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SOPT-29th-JointSeminar-9-Client-iOS/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
