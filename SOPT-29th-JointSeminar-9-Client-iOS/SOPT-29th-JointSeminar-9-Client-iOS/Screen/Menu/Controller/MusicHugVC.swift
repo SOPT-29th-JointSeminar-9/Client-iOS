@@ -103,7 +103,17 @@ class MusicHugVC: UIViewController, CustomMenuBarDelegate {
 }
 
 //MARK: - Extension Part
+extension MusicHugVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: pageCollectionView.frame.width, height: pageCollectionView.frame.height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
 extension MusicHugVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    // 홈, DJ차트, 친구가 있는 콜렉션뷰
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuPageCVC.reusableIdentifier, for: indexPath) as! MenuPageCVC
         cell.delegate = self
@@ -126,20 +136,11 @@ extension MusicHugVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension MusicHugVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: pageCollectionView.frame.width, height: pageCollectionView.frame.height)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-}
-
-extension MusicHugVC: CVCellDelegate {
-    func touchUpToGoCreate(_ index: Int) {
-        guard let vc = UIStoryboard(name: "PopUp", bundle: nil).instantiateViewController(withIdentifier: Identifiers.popUpVC) as? PopUpVC else { return }        
+extension MusicHugVC: TVCellDelegate {
+    func createButtonDidTapped() {
+        guard let vc = UIStoryboard(name: "PopUp", bundle: nil).instantiateViewController(withIdentifier: Identifiers.popUpVC) as? PopUpVC else { return }
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
     }
 }

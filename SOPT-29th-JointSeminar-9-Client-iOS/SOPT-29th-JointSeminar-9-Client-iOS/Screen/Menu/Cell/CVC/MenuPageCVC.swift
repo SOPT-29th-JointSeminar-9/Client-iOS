@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol CVCellDelegate {
-    func touchUpToGoCreate(_ index: Int)
+protocol TVCellDelegate {
+    func createButtonDidTapped()
 }
 
 class MenuPageCVC: UICollectionViewCell {
     
     private let sections: [String] = ["실시간 인기", "최신"]
-    var delegate: CVCellDelegate?
+    var delegate: TVCellDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,30 +40,37 @@ extension MenuPageCVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
+    //홈탭의 테이블뷰
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 0: //Popular
+            case 0: //실시간 인기
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.popularMenuTVC) as? PopularMenuTVC else { return UITableViewCell() }
                 return cell
-            case 1: //Button
+            case 1: //개설하기 버튼
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC, for: indexPath) as? ButtonTVC else {return UITableViewCell() }
+                cell.buttonTapped = { [self](cell) -> Void in
+                    if let delegate = delegate {
+                        delegate.createButtonDidTapped()
+                    }
+                }
+                cell.selectionStyle = .none
                 return cell
             default:
                 return UITableViewCell()
             }
         } else if indexPath.section == 1 {
             switch indexPath.row {
-            case 0: //New
+            case 0: //최신
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.popularMenuTVC) as? PopularMenuTVC else { return UITableViewCell() }
                 return cell
-            case 1:
+            case 1: //맨위로 버튼
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC) as? ButtonTVC else { return UITableViewCell() }
                 return cell
             default:
@@ -76,11 +83,7 @@ extension MenuPageCVC: UITableViewDataSource {
 }
 
 extension MenuPageCVC: UITableViewDelegate {
-    func tableView(_ tableview: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let delegate = delegate {
-            delegate.touchUpToGoCreate(indexPath.item)
-        }
-    }
+    // 각 테이블 뷰 height 설정
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0: //Popular
@@ -94,6 +97,7 @@ extension MenuPageCVC: UITableViewDelegate {
         }
     }
     
+    //MARK: - 홈탭 헤더 설정
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
         let label = UILabel()
@@ -101,9 +105,8 @@ extension MenuPageCVC: UITableViewDelegate {
         label.text = sections[section]
         label.font = UIFont.AppleSDGothicM(size: 19)
         label.textColor = .black
-        
+
         headerView.addSubview(label)
-        
         return headerView
     }
     
