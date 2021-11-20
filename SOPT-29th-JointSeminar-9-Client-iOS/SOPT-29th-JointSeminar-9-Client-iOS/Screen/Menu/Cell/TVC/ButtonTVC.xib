@@ -24,9 +24,6 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="iosMainBtnCreate"/>
-                        <connections>
-                            <action selector="touchUpToCrateVC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dxk-gF-h3R"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
