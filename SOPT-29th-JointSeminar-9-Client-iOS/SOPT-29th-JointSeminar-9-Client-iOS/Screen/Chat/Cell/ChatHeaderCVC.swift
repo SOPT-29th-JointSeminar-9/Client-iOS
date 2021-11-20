@@ -17,7 +17,7 @@ class ChatHeaderCVC: BaseCell {
         $0.textColor = .gray3
         $0.font = UIFont.AppleSDGothicM(size: 12)
         $0.sizeToFit()
-//        $0.linespacing = -0.36
+        $0.letterSpacing = -0.36
     }
     private var musichugWarningLabel = UILabel().then {
         $0.text = "채팅 내용은 별도 저장되지 않으며,\n욕설·혐오·비방 표현은 제재될 수 있습니다."
@@ -26,7 +26,7 @@ class ChatHeaderCVC: BaseCell {
         $0.numberOfLines = 0
         $0.textAlignment = .center
         $0.sizeToFit()
-//        $0.linespacing = -0.36
+        $0.letterSpacing = -0.36
     }
 
     //MARK: init

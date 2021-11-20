@@ -24,7 +24,7 @@ class MusicPlayChatCVC: BaseCell {
         $0.font = UIFont.AppleSDGothicR(size: 14)
         $0.textColor = .white
         $0.textAlignment = .left
-        //        $0.letterSpacing = -0.39
+        $0.letterSpacing = -0.39
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping
         $0.sizeToFit()
