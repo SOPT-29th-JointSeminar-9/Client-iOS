@@ -24,6 +24,7 @@ class PopUpVC: UIViewController {
     
     @IBAction func touchUpToGoChatVC(_ sender: Any) {
         guard let vc = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: Identifiers.chatVC) as? ChatVC else { return }
+        vc.roomTitle = roomTextField.text
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33027BA1274378F900C24C26 /* ChatMusicBottomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */; };
 		330FF2812740223700E685BC /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FF2802740223700E685BC /* HeartVC.swift */; };
+		331D3CDF2748B458000CDD88 /* Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D3CDE2748B458000CDD88 /* Notification.Name.swift */; };
 		335870F327479E9A005A3FFA /* CounterpartChatCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335870EF27479E99005A3FFA /* CounterpartChatCVC.swift */; };
 		335870F427479E9A005A3FFA /* ChatHeaderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335870F027479E99005A3FFA /* ChatHeaderCVC.swift */; };
 		335870F527479E9A005A3FFA /* MusicPlayChatCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335870F127479E9A005A3FFA /* MusicPlayChatCVC.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		33027BA0274378F900C24C26 /* ChatMusicBottomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMusicBottomVC.swift; sourceTree = "<group>"; };
 		330FF2802740223700E685BC /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
+		331D3CDE2748B458000CDD88 /* Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.Name.swift; sourceTree = "<group>"; };
 		335870EF27479E99005A3FFA /* CounterpartChatCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterpartChatCVC.swift; sourceTree = "<group>"; };
 		335870F027479E99005A3FFA /* ChatHeaderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderCVC.swift; sourceTree = "<group>"; };
 		335870F127479E9A005A3FFA /* MusicPlayChatCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayChatCVC.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				33C0A27F2740396500B6687D /* UIFont+.swift */,
 				33F15AC82744BB1900B898E4 /* String+.swift */,
 				33C0A290274162C600B6687D /* UILabel+.swift */,
+				331D3CDE2748B458000CDD88 /* Notification.Name.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				3379621A273E31D500E2AD02 /* NetworkResult.swift in Sources */,
 				33F15AC92744BB1900B898E4 /* String+.swift in Sources */,
 				6F0D903127460066004ACC8B /* NSObject + reusableIdentifier.swift in Sources */,
+				331D3CDF2748B458000CDD88 /* Notification.Name.swift in Sources */,
 				6F3A2BEF2746E853009528FE /* MenuContentData.swift in Sources */,
 				33C0A2742740247D00B6687D /* ChatVC.swift in Sources */,
 				6F3A2BEA2746E6EC009528FE /* MenuNVC.swift in Sources */,

@@ -19,9 +19,9 @@ class MusicHugNaviBarView: UIView {
     
     private var chatNaviTitleLabel = UILabel().then {
         $0.font = UIFont.AppleSDGothicM(size: 15)
-        $0.text = "나만의 뮤직허그 방명"
+        //        $0.text = "나만의 뮤직허그 방명"
         $0.textColor = .black
-        //        $0.letterSpacing = 0.12
+        $0.letterSpacing = 0.12
     }
     
     private var chatSearchBtn = UIButton().then {
@@ -37,6 +37,10 @@ class MusicHugNaviBarView: UIView {
         super.init(frame: frame)
         configureLayout()
         self.backgroundColor = .chatBackgroundGray
+    }
+    
+    func setNaviRoomTitle(roomTitle: String) {
+        chatNaviTitleLabel.text = roomTitle
     }
     
     required init?(coder: NSCoder) {
@@ -80,6 +84,6 @@ extension MusicHugNaviBarView {
 //MARK: - IBAction func
 extension MusicHugNaviBarView {
     @objc func chatDownBtnDidTap() {
-        print("chatDownBtnDidTap")
+        NotificationCenter.default.post(name: .pushedChatDown, object: nil)
     }
 }

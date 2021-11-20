@@ -38,7 +38,7 @@ class CounterpartChatCVC: BaseCell {
         $0.font = UIFont.AppleSDGothicM(size: 14)
         $0.textColor = .chatTextGray
         $0.textAlignment = .left
-        //        $0.letterSpacing = -0.39
+        $0.letterSpacing = -0.39
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping

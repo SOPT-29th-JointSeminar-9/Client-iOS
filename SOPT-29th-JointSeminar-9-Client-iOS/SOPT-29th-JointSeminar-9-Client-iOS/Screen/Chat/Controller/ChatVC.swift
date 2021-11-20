@@ -12,6 +12,7 @@ import Then
 class ChatVC: UIViewController {
     
     //MARK: Properties
+    var roomTitle: String?
     private var chatNC = MusicHugNaviBarView()
     private var chatCV = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         let layout = UICollectionViewFlowLayout()
@@ -21,12 +22,16 @@ class ChatVC: UIViewController {
         $0.showsHorizontalScrollIndicator = false
         $0.collectionViewLayout = layout
     }
+    private var chatMusicBottomView: BottomMusicBarView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
+        setNaviRoomTitle()
         registerCell()
         configueLayout()
+        configureContainerChatBottomBar()
+        notificationObserver()
     }
     
     // 대리자 위임
@@ -34,6 +39,7 @@ class ChatVC: UIViewController {
         chatCV.delegate = self
         chatCV.dataSource = self
     }
+
   
     // 셀 등록
     func registerCell() {
@@ -46,9 +52,18 @@ class ChatVC: UIViewController {
         self.chatCV.register(MyChatCVC.self,
                              forCellWithReuseIdentifier: "MyChatCVC")
     }
+    
+    func notificationObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissChatView), name: .pushedChatDown, object: nil)
+    }
 }
 //MARK: - Layout
 extension ChatVC {
+    // MARK: BottomMusicView init 함수
+    func initBottomMusicView() {
+        chatMusicBottomView = BottomMusicBarView(frame: self.view.frame, state: .chat)
+    }
+    
     func configueLayout() {
         self.view.addSubviews([chatNC, chatCV])
         chatNC.snp.makeConstraints {
@@ -58,8 +73,21 @@ extension ChatVC {
         
         chatCV.snp.makeConstraints {
             $0.top.equalTo(chatNC.snp.bottom).offset(0)
-            $0.leading.trailing.bottom.equalTo(self.view)
+            $0.leading.trailing.equalTo(self.view)
+            $0.bottom.equalTo(self.view).offset(-115)
         }
+    }
+    
+    func configureContainerChatBottomBar() {
+        guard let chatMusicPlayerVC = storyboard?.instantiateViewController(withIdentifier: Identifiers.chatMusicBottomVC) as? ChatMusicBottomVC else { return }
+        addChild(chatMusicPlayerVC)
+        chatMusicPlayerVC.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(chatMusicPlayerVC.view)
+        chatMusicPlayerVC.view.snp.makeConstraints {
+            $0.bottom.equalTo(self.view.snp.bottom).offset(-45)
+            $0.height.equalTo(70)
+        }
+        chatMusicPlayerVC.didMove(toParent: self)
     }
 }
 //MARK: - UICollectionViewDataSource
@@ -170,5 +198,15 @@ extension ChatVC {
         label.text = text
         label.sizeToFit()
         return label.frame.height
+    }
+    
+    @objc func dismissChatView() {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func setNaviRoomTitle() {
+        if let text = roomTitle {
+            chatNC.setNaviRoomTitle(roomTitle: text)
+        }
     }
 }

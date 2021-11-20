@@ -20,7 +20,7 @@ class MyChatCVC: BaseCell {
         $0.font = UIFont.AppleSDGothicM(size: 14)
         $0.textColor = .white
         $0.textAlignment = .left
-        //        $0.letterSpacing = -0.39
+        $0.letterSpacing = -0.39
         $0.paddingTop = 13
         $0.paddingLeft = 23
         $0.paddingRight = 23
