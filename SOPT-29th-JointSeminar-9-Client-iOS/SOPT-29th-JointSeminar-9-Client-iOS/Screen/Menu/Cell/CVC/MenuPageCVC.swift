@@ -46,6 +46,9 @@ class MenuPageCVC: UICollectionViewCell {
 
     let xibName4 = UINib(nibName: Identifiers.upButtonTVC, bundle: nil)
     tableView.register(xibName4, forCellReuseIdentifier: Identifiers.upButtonTVC)
+    
+    let xibName5 = UINib(nibName: Identifiers.bottomEmptyTVC, bundle: nil)
+    tableView.register(xibName5, forCellReuseIdentifier: Identifiers.bottomEmptyTVC)
   }
 }
 
@@ -57,7 +60,13 @@ extension MenuPageCVC: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 2
+    if section == 0 {
+      return 2
+    } else if section == 1 {
+      return 3
+    } else {
+      return 2
+    }
   }
   
   //홈탭의 테이블뷰
@@ -69,7 +78,7 @@ extension MenuPageCVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.popularMenuTVC) as? PopularMenuTVC else { return UITableViewCell() }
         return cell
       case 1: //개설하기 버튼
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC, for: indexPath) as? ButtonTVC else {return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC, for: indexPath) as? ButtonTVC else { return UITableViewCell() }
         cell.buttonTapped = { [self](cell) -> Void in
           if let delegate = delegate {
             delegate.createButtonDidTapped()
@@ -84,9 +93,14 @@ extension MenuPageCVC: UITableViewDataSource {
       switch indexPath.row {
       case 0: //최신
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newMenuTVC) as? NewMenuTVC else { return UITableViewCell() }
+        cell.selectionStyle = .none
         return cell
       case 1: //맨위로 버튼
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.upButtonTVC) as? UpButtonTVC else { return UITableViewCell() }
+        cell.selectionStyle = .none
+        return cell
+      case 2:
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.bottomEmptyTVC) as? BottomEmptyTVC else { return UITableViewCell() }
         return cell
       default:
         return UITableViewCell()
@@ -105,23 +119,25 @@ extension MenuPageCVC: UITableViewDelegate {
     if indexPath.section == 0 {
       switch indexPath.row {
       case 0: //실시간 인기
-        return 390
+        return 370
       case 1: //개설하기 버튼
         return 60
       default:
-        return 390
+        return 0
       }
     } else if indexPath.section == 1 {
       switch indexPath.row {
       case 0: //최신
         return CGFloat(116*newContentList.count)
       case 1: //맨위로 버튼
-        return 60
+        return 100
+      case 2: //여분 공간
+        return 55
       default:
-        return 390
+        return 0
       }
     } else {
-      return 390
+      return 0
     }
   }
   
@@ -140,7 +156,7 @@ extension MenuPageCVC: UITableViewDelegate {
   
   // 헤더 사이즈 설정
   func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-    return 30
+    return 40
   }
   
   // 스크롤하면 헤더 사라지게 하기

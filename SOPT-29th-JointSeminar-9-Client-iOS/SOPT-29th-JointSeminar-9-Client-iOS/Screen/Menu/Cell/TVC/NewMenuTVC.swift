@@ -69,6 +69,7 @@ extension NewMenuTVC: UITableViewDataSource {
         return UITableViewCell()
     }
     cell.setData(data: newContentList[indexPath.row])
+    cell.selectionStyle = .none
     return cell
   }
 }
