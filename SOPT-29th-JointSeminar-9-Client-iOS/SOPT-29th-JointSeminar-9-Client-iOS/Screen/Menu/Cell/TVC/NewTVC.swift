@@ -11,6 +11,7 @@ class NewTVC: UITableViewCell {
   
   // MARK: - UIComponent
   
+  @IBOutlet weak var backView: UIView!
   @IBOutlet weak var numberOfListenerLabel: UILabel!
   @IBOutlet weak var titleAndArtistLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
@@ -20,6 +21,7 @@ class NewTVC: UITableViewCell {
   @IBOutlet weak var nameDJLabel: UILabel!
   @IBOutlet weak var fanLabel: UILabel!
   
+  // MARK: - Life Cycle
   override func awakeFromNib() {
     super.awakeFromNib()
     setCell()
@@ -29,16 +31,23 @@ class NewTVC: UITableViewCell {
     super.setSelected(selected, animated: animated)
   }
   
-  // MARK: - Custom Func Method
+  // MARK: - Func
   
   func setCell() {
-    numberOfListenerLabel.font = UIFont.AppleSDGothicB(size: 9)
-    titleAndArtistLabel.font = UIFont.AppleSDGothicB(size: 11)
-    descriptionLabel.font = UIFont.AppleSDGothicB(size: 14)
-    numberOfFanLabel.font = UIFont.AppleSDGothicB(size: 9)
-    listenerLabel.font = UIFont.AppleSDGothicB(size: 9)
-    nameDJLabel.font = UIFont.AppleSDGothicB(size: 9)
-    fanLabel.font = UIFont.AppleSDGothicB(size: 9)
+    let newgray = UIColor.gray1.cgColor
+    
+    backView.backgroundColor = .white
+    backView.layer.borderColor = newgray
+    backView.layer.cornerRadius = 12
+    backView.layer.borderWidth = 1
+    
+    numberOfListenerLabel.font = UIFont.AppleSDGothicM(size: 9)
+    titleAndArtistLabel.font = UIFont.AppleSDGothicM(size: 11)
+    descriptionLabel.font = UIFont.AppleSDGothicM(size: 14)
+    numberOfFanLabel.font = UIFont.AppleSDGothicM(size: 9)
+    listenerLabel.font = UIFont.AppleSDGothicM(size: 9)
+    nameDJLabel.font = UIFont.AppleSDGothicM(size: 9)
+    fanLabel.font = UIFont.AppleSDGothicM(size: 9)
     
     numberOfListenerLabel.textColor = .main
     titleAndArtistLabel.textColor = .gray4
@@ -54,5 +63,6 @@ class NewTVC: UITableViewCell {
     nameDJLabel.text = data.DJname
     numberOfFanLabel.text = data.fans
     numberOfListenerLabel.text = data.listeners
+    albumImage.image = data.makeImage()
   }
 }

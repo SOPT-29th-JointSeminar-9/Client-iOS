@@ -7,6 +7,9 @@
 
 import UIKit
 
+var newContentList: [ContentData] = []
+var popularContentList: [ContentData] = []
+
 struct PageContentData {
     let pageName: String
 }

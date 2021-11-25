@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,7 +134,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" name="gray_2"/>
+                <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="IsY-l8-40g" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CZh-jR-87U"/>
                     <constraint firstItem="IsY-l8-40g" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="izb-z0-BQJ"/>
@@ -144,6 +143,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="albumImage" destination="YJm-jB-C8l" id="SPY-M9-ywF"/>
+                <outlet property="backView" destination="IsY-l8-40g" id="M6K-el-oH6"/>
                 <outlet property="descriptionLabel" destination="Cd1-ne-5LR" id="ljy-Mg-w3S"/>
                 <outlet property="fanLabel" destination="XIi-C8-UBf" id="8ua-PM-1tn"/>
                 <outlet property="listenerLabel" destination="tGZ-dy-uJy" id="M4v-aH-ZzP"/>
@@ -157,9 +157,6 @@
     </objects>
     <resources>
         <image name="mainIcVolumebar" width="10" height="11"/>
-        <namedColor name="gray_2">
-            <color red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
