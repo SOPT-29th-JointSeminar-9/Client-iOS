@@ -28,8 +28,8 @@ class ChatMusicBottomVC: UIViewController {
     func configureLayout() {
         self.view.addSubview(bottomMusicView ?? UIView())
         bottomMusicView?.snp.makeConstraints {
-            $0.top.leading.trailing.equalTo(self.view).offset(0)
-            $0.height.equalTo(70)
+            $0.bottom.leading.trailing.equalTo(self.view).offset(0)
+            $0.height.equalTo(68)
         }
     }
     

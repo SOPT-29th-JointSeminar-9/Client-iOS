@@ -19,7 +19,6 @@ class MusicHugNaviBarView: UIView {
     
     private var chatNaviTitleLabel = UILabel().then {
         $0.font = UIFont.AppleSDGothicM(size: 15)
-        //        $0.text = "나만의 뮤직허그 방명"
         $0.textColor = .black
         $0.letterSpacing = 0.12
     }

@@ -84,8 +84,9 @@ extension ChatVC {
         chatMusicPlayerVC.view.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(chatMusicPlayerVC.view)
         chatMusicPlayerVC.view.snp.makeConstraints {
-            $0.bottom.equalTo(self.view.snp.bottom).offset(-45)
-            $0.height.equalTo(70)
+            $0.leading.trailing.equalTo(self.view).offset(0)
+            $0.bottom.equalTo(self.view.snp.bottom).offset(-46)
+            $0.height.equalTo(68)
         }
         chatMusicPlayerVC.didMove(toParent: self)
     }
