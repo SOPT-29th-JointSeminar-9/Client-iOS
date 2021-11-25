@@ -68,6 +68,8 @@
 		6FCF3150274F93BB0075A130 /* NewTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF314E274F93BB0075A130 /* NewTVC.xib */; };
 		6FCF3155274FADA40075A130 /* NewMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF3153274FADA40075A130 /* NewMenuTVC.swift */; };
 		6FCF3156274FADA40075A130 /* NewMenuTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF3154274FADA40075A130 /* NewMenuTVC.xib */; };
+		6FCF3159274FBFAE0075A130 /* UpButtonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCF3157274FBFAE0075A130 /* UpButtonTVC.swift */; };
+		6FCF315A274FBFAE0075A130 /* UpButtonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF3158274FBFAE0075A130 /* UpButtonTVC.xib */; };
 		BAA723D98CAD9942515071B4 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E67ABC84ED040E7A50914 /* Pods_SOPT_29th_JointSeminar_9_Client_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +139,8 @@
 		6FCF314E274F93BB0075A130 /* NewTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTVC.xib; sourceTree = "<group>"; };
 		6FCF3153274FADA40075A130 /* NewMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMenuTVC.swift; sourceTree = "<group>"; };
 		6FCF3154274FADA40075A130 /* NewMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMenuTVC.xib; sourceTree = "<group>"; };
+		6FCF3157274FBFAE0075A130 /* UpButtonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpButtonTVC.swift; sourceTree = "<group>"; };
+		6FCF3158274FBFAE0075A130 /* UpButtonTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpButtonTVC.xib; sourceTree = "<group>"; };
 		D150484FC68C65A496FAB520 /* Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOPT-29th-JointSeminar-9-Client-iOS/Pods-SOPT-29th-JointSeminar-9-Client-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -441,6 +445,8 @@
 				6FCF314D274F93BB0075A130 /* NewTVC.swift */,
 				6F88B6B527477D1100EA9085 /* ButtonTVC.swift */,
 				6F88B6B427477D1100EA9085 /* ButtonTVC.xib */,
+				6FCF3157274FBFAE0075A130 /* UpButtonTVC.swift */,
+				6FCF3158274FBFAE0075A130 /* UpButtonTVC.xib */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				33C0A2882740400D00B6687D /* AppleSDGothicNeoM.ttf in Resources */,
 				337961E9273E2B7E00E2AD02 /* Assets.xcassets in Resources */,
 				6F24CF2E2747020300B42952 /* PopularCVC.xib in Resources */,
+				6FCF315A274FBFAE0075A130 /* UpButtonTVC.xib in Resources */,
 				33C0A2872740400A00B6687D /* AppleSDGothicNeoB.ttf in Resources */,
 				33C0A2892740400F00B6687D /* AppleSDGothicNeoR.ttf in Resources */,
 				337961E7273E2B7B00E2AD02 /* Main.storyboard in Resources */,
@@ -603,6 +610,7 @@
 				33C0A2802740396500B6687D /* UIFont+.swift in Sources */,
 				337961E4273E2B7B00E2AD02 /* HomeVC.swift in Sources */,
 				33796218273E31A600E2AD02 /* APIConstants.swift in Sources */,
+				6FCF3159274FBFAE0075A130 /* UpButtonTVC.swift in Sources */,
 				6FCF314F274F93BB0075A130 /* NewTVC.swift in Sources */,
 				33796206273E2EB600E2AD02 /* UIColor+Additions.swift in Sources */,
 				33F15ADB27478EDB00B898E4 /* BasePaddingLabel.swift in Sources */,

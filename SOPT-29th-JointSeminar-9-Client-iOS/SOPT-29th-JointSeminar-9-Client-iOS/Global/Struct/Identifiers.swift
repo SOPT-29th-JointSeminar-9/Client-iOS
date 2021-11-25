@@ -39,6 +39,7 @@ struct Identifiers {
     static let buttonTVC = "ButtonTVC"
     static let newTVC = "NewTVC"
     static let newMenuTVC = "NewMenuTVC"
+    static let upButtonTVC = "UpButtonTVC"
     
     //MARK: - View
     static let bottomMusicBarView = "BottomMusicBarView"

@@ -43,6 +43,9 @@ class MenuPageCVC: UICollectionViewCell {
     
     let xibName3 = UINib(nibName: Identifiers.newMenuTVC, bundle: nil)
     tableView.register(xibName3, forCellReuseIdentifier: Identifiers.newMenuTVC)
+
+    let xibName4 = UINib(nibName: Identifiers.upButtonTVC, bundle: nil)
+    tableView.register(xibName4, forCellReuseIdentifier: Identifiers.upButtonTVC)
   }
 }
 
@@ -83,7 +86,7 @@ extension MenuPageCVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newMenuTVC) as? NewMenuTVC else { return UITableViewCell() }
         return cell
       case 1: //맨위로 버튼
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.buttonTVC) as? ButtonTVC else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.upButtonTVC) as? UpButtonTVC else { return UITableViewCell() }
         return cell
       default:
         return UITableViewCell()
@@ -150,6 +153,13 @@ extension MenuPageCVC: UITableViewDelegate {
       }
     } else if (scrollView.contentOffset.y >= scrollHeaderHeight){
       scrollView.contentInset = UIEdgeInsets(top: -scrollHeaderHeight, left: 0, bottom: 0, right: 0)
+    }
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if indexPath.section == 1 && indexPath.row == 1 {
+      print("맨위로")
+      tableView.setContentOffset(CGPoint.zero, animated: true)
     }
   }
 }
