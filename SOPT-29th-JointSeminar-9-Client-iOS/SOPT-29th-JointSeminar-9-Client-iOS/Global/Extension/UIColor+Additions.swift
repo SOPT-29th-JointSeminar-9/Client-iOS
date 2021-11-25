@@ -52,4 +52,8 @@ extension UIColor {
     @nonobjc class var chatTextGray: UIColor {
         return UIColor(red: 91.0 / 255.0, green: 91.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
     }
+  
+    @nonobjc class var gray4: UIColor {
+        return UIColor(red: 91.0 / 255.0, green: 91.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
+    }
 }
