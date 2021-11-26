@@ -17,7 +17,6 @@ class PopularMenuTVC: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    initContentList()
     registerXib()
     collectionView.dataSource = self
     collectionView.delegate = self
@@ -32,16 +31,6 @@ class PopularMenuTVC: UITableViewCell {
   func registerXib() {
     let xibName = UINib(nibName: Identifiers.popularCVC, bundle: nil)
     collectionView.register(xibName, forCellWithReuseIdentifier: Identifiers.popularCVC)
-  }
-
-  func initContentList() {
-    popularContentList.append(contentsOf: [
-      ContentData(title: "낮잠", artist: "실리카겔", description: "나른한 오후,\n햇살과 어울리는 음악🌞", DJname: "Mez1nee", fans: "35.4K", listeners: "985", imgName: "mainImgCover5"),
-      ContentData(title: "19", artist: "뎁트", description: "학창시절을 떠올리게\n하는 하이틴 노래모음", DJname: "효린쓰", fans: "42K", listeners: "593", imgName: "mainImgCover4"),
-      ContentData(title: "Lemonade", artist: "NCT 127", description: "밤샘작업💦하는 당신을\n위한 흥겨운 K-POP", DJname: "강쥐가 세상을 구한다", fans: "13.7K", listeners: "426", imgName: "mainImgCover3"),
-      ContentData(title: "Big Love", artist: "검정치마 (The Black Skirts)", description: "요즘 같은 날씨에\n듣기 좋은 감성플리🎶", DJname: "햄버거시키지마라", fans: "52.9K", listeners: "321", imgName: "mainImgCover2"),
-      ContentData(title: "Sea Gets Hotter (Feat. Aar...", artist: "Durand Jones & The Indications", description: "포근함을\n노래로 만든다면", DJname: "auaoavxx", fans: "8.2K", listeners: "112", imgName: "mainImgCover1")
-    ])
   }
 }
 
