@@ -45,7 +45,7 @@
 
 <br>
 
-## 🌈 View Hierachy
+## 🌈 View Hierarchy
 ### 🎧 뮤직허그 MainView
 
 <img width=300px src=https://user-images.githubusercontent.com/76610340/143442389-743f5e5e-022c-43f4-880f-24ddb75dd056.png> 
