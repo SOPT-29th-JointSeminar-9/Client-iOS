@@ -36,6 +36,19 @@ class BottomTextingAreaView: UIView {
 extension BottomTextingAreaView {
     //MARK: BottomTextingAreaView Layout
     func configureLayout() {
+        self.addSubviews([chatShareBtn, chatTextField])
+        
+        chatShareBtn.snp.makeConstraints {
+            $0.leading.equalTo(self).offset(25)
+            $0.width.equalTo(25)
+            $0.height.equalTo(25)
+            $0.centerY.equalTo(self)
+        }
+        
+        chatTextField.snp.makeConstraints {
+            $0.leading.equalTo(chatShareBtn.snp.trailing).offset(30)
+            $0.width.equalTo(150)
+        }
     }
 }
 //MARK: - IBAction func

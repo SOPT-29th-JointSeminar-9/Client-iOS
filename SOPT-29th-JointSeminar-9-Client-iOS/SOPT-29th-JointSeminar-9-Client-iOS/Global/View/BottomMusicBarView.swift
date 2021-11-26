@@ -133,7 +133,7 @@ extension BottomMusicBarView {
         }
     }
     
-    //MARK: Normal BottomMusicBarView Layout
+    //MARK: Chat BottomMusicBarView Layout
     func configureLayoutWhenChat() {
         self.addSubviews([albumCoverImageView, musicTitleLabel, singerLabel, playPauseMusicBtn, playlistBtn, playProgressView])
         albumCoverImageView.snp.makeConstraints {
@@ -154,7 +154,7 @@ extension BottomMusicBarView {
         }
         
         playlistBtn.snp.makeConstraints {
-            $0.trailing.equalTo(self).offset(-18)
+            $0.trailing.equalTo(self.snp.trailing).offset(-18)
             $0.height.equalTo(12)
             $0.width.equalTo(16)
             $0.centerY.equalTo(self)
@@ -168,7 +168,7 @@ extension BottomMusicBarView {
         }
         
         playProgressView.snp.makeConstraints {
-            $0.bottom.equalTo(self.snp.top)
+            $0.bottom.equalTo(self.snp.top).offset(0)
             $0.leading.trailing.equalTo(self)
             $0.height.equalTo(1.2)
         }
