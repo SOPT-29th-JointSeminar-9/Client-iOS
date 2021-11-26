@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainIcUp" translatesAutoresizingMaskIntoConstraints="NO" id="8Dq-dw-bPj">
-                        <rect key="frame" x="182" y="63.5" width="9" height="5"/>
+                        <rect key="frame" x="178" y="63.5" width="9" height="5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aT-KP-asi">
-                        <rect key="frame" x="196" y="55.5" width="42" height="21"/>
+                        <rect key="frame" x="192" y="55.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                 <constraints>
                     <constraint firstItem="3aT-KP-asi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4du-30-z9s"/>
                     <constraint firstItem="3aT-KP-asi" firstAttribute="leading" secondItem="8Dq-dw-bPj" secondAttribute="trailing" constant="5" id="7ie-yw-NvQ"/>
-                    <constraint firstItem="8Dq-dw-bPj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="162" id="fAq-pB-2mw"/>
+                    <constraint firstItem="8Dq-dw-bPj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="158" id="fAq-pB-2mw"/>
                     <constraint firstItem="8Dq-dw-bPj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tbO-Qc-n1l"/>
                 </constraints>
             </tableViewCellContentView>
