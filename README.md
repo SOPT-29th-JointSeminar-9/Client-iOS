@@ -2,7 +2,7 @@
 
 ## 🌊 Project
 **🎧 음악 서비스, Genie 💙**!
-> **SOPT 29th JointSeminar**  
+> **SOPT 29th JointSeminar-9조**  
 > **프로젝트 기간: 2021.11.13 ~ 2021.12.03**  
 
 **📱구현 영상**
@@ -25,6 +25,22 @@
     <td align="center"><a href="https://github.com/jumining"><img src="https://user-images.githubusercontent.com/63224278/143587600-9a6c8d10-a59e-4b7c-8fdc-02ba306dfdfb.png" width="100px;" alt=""/><br /><sub><b>jumining</b></sub></a><br /><a href="https://github.com/SOPT-29th-JointSeminar-9/Client-iOS/commits?author=jumining" title="Code">📱</a></td>
   </tr>
 </table>
+
+<br>
+
+## 📒 Task
+> [🍏 SOPT 29th JointSeminar-9조 협업일지 🍏 ](https://www.notion.so/storypanda/iOS-879f8227fb204925b8b0059ba2daf725)
+
+
+| 기능 | 개발 여부 | 담당자 |
+|:----------|:----------:|:----:|
+| 💙 탭바 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 황지은 |
+| 🎧 하단 음악재생바 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 황지은 |
+| 🍎 뮤직허그뷰 뷰페이저 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 임주민 |
+| 🍎 뮤직허그뷰 전체 레이아웃 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 임주민 |
+| 💬 팝업뷰(방 개설) | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 임주민 |
+| 🗣 채팅뷰 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 황지은 |
+| ⚙️ 프로젝트 셋팅 | <img width=30px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png> | 황지은 |
 
 <br>
 
