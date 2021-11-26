@@ -1,9 +1,15 @@
 <img width=200px src=https://user-images.githubusercontent.com/63224278/143586538-5155519b-7d73-422e-97bf-806874df93ec.jpg> <img width=200px src=https://user-images.githubusercontent.com/63224278/143587668-b51e84b2-49d3-4d34-ba11-aff401f7733c.png>
 
 ## 🌊 Project
-**음악 서비스, Genie**!
+**🎧 음악 서비스, Genie 💙**!
 > **SOPT 29th JointSeminar**  
 > **프로젝트 기간: 2021.11.13 ~ 2021.12.03**  
+
+**📱구현 영상**
+
+![Simulator Screen Recording - iPhone 13 - 2021-11-26 at 21 39 07](https://user-images.githubusercontent.com/63224278/143592088-644b98e8-a26d-47e1-80ba-0e8fbefeb3e2.gif)
+
+
 
 <br>
 
