@@ -6,3 +6,85 @@
 //
 
 import Foundation
+import Moya
+
+class MusicHugAPI {
+    static let shared = MusicHugAPI()
+    var userProvider = MoyaProvider<MusicHugService>(plugins: [NetworkLoggerPlugin()])
+    
+    private init() {}
+    
+    //MARK: API
+    /// [POST] 뮤직허그 방 생성
+    func createMusicHugAPI(hugTitle: String, nickname: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        userProvider.request(.createMusigHugRoom(hugTitle: hugTitle, nickname: nickname)) { [self] result in
+            switch result {
+                
+            case .success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                
+                completion(createMusicHugJudgeData(status: statusCode, data: data))
+                
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+    
+    /// [GET] 뮤직허그 세부 정보 조회
+    func getDetailMusicHugAPI(hugID: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        userProvider.request(.getDetailMusicHugData(hugID: hugID)) { [self] result in
+            switch result {
+            
+            case .success(let response):
+                let statusCode = response.statusCode
+                let data = response.data
+                
+                completion(getDetailMusicHugJudgeData(status: statusCode, data: data))
+                
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+    
+    ///주민이가 만들 최신순, 인기순 API
+    //... 여기다 만들어주면 되어요 ~~!
+    
+    
+    //MARK: judgeData
+    func createMusicHugJudgeData(status: Int, data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GenericResponse<String>.self, from: data) else {
+            return .pathErr }
+        
+        switch status {
+        case 201:
+            return .success(decodedData.data ?? "None-Data")
+        case 400...500:
+            return .requestErr(decodedData.message)
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    func getDetailMusicHugJudgeData(status: Int, data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GenericResponse<MusicHugDetailData>.self, from: data) else {
+            return .pathErr }
+        
+        switch status {
+        case 200:
+            return .success(decodedData.data ?? "None-Data")
+        case 400...500:
+            return .requestErr(decodedData.message)
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+}
