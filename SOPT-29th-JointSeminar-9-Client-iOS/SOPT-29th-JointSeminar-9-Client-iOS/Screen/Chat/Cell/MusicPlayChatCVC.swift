@@ -37,21 +37,27 @@ class MusicPlayChatCVC: BaseCell {
     }
     
     //MARK: init
-    func setupViews(model: MessageData) {
+    func setupViews(model: MusicHugDetailData) {
         bind(data: model)
         configureLayout()
     }
     
-    func bind(data: MessageData) {
-        musicAlbumCoverImageView.image = UIImage(named: "chatImgMusic")
-        playingMusicTextLabel.text = data.messageText
-        sendTimeLabel.text = data.sendTime
+    func bind(data: MusicHugDetailData) {
+        if let url = URL(string: data.cover) {
+            if let imageData = try? Data(contentsOf: url) {
+                musicAlbumCoverImageView.image = UIImage(data: imageData)
+            }
+        }
+        playingMusicTextLabel.text = "♫ '\(data.musicTitle)_\(data.artist)'\n재생됩니다."
+        sendTimeLabel.text = data.sentTime
     }
     
     //MARK: layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         chatBlueBackView.roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 10.0)
+        musicAlbumCoverImageView.layer.cornerRadius = 5
+        musicAlbumCoverImageView.clipsToBounds = true
     }
 }
 //MARK: - Layout
