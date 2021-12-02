@@ -49,8 +49,25 @@ class MusicHugAPI {
         }
     }
     
-    ///주민이가 만들 최신순, 인기순 API
-    //... 여기다 만들어주면 되어요 ~~!
+  /// 최신순
+  func getDataNewAPI(completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    userProvider.request(.getMusicHugNewestData) { [self] result in
+        switch result {
+        
+        case .success(let response):
+            let statusCode = response.statusCode
+            let data = response.data
+            
+            completion(getDetailMusicHugJudgeData(status: statusCode, data: data))
+            
+        case .failure(let err):
+          print(err)
+        }
+    }
+  }
+  
+  /// 인기순 API
+
     
     
     //MARK: judgeData
@@ -80,6 +97,7 @@ class MusicHugAPI {
         
         switch status {
         case 200:
+          print("data?: ", decodedData.data)
             return .success(decodedData.data ?? "None-Data")
         case 400...500:
             return .requestErr(decodedData.message)

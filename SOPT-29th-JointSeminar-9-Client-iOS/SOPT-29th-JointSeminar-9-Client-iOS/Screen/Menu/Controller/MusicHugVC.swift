@@ -75,7 +75,6 @@ class MusicHugVC: UIViewController, CustomMenuBarDelegate {
         self.view.addSubview(customMenuBar)
         customMenuBar.delegate = self
         customMenuBar.translatesAutoresizingMaskIntoConstraints = false
-        //수정 필요
         customMenuBar.indicatorViewWidthConstraint.constant = self.view.frame.width / 3
         customMenuBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         customMenuBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
@@ -125,7 +124,6 @@ extension MusicHugVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // 수정 필요
         customMenuBar.indicatorViewLeadingConstraint.constant = scrollView.contentOffset.x / 3
     }
     

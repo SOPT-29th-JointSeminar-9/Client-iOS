@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 var newContentList: [ContentData] = [
   ContentData(title: "Savage", artist: "aespa", description: "에스파 팬이라면 퍼가 ㅋ", DJname: "에스파는나야둘이될수없어", fans: "29", listeners: "2", imgName: "mainImgCover6"),
   ContentData(title: "새삼스럽게 왜", artist: "AKMU(악뮤)", description: "음색깡패들과 함께 고막호강", DJname: "hawonow", fans: "12", listeners: "5", imgName: "mainImgCover7"),
@@ -15,7 +15,7 @@ var newContentList: [ContentData] = [
   ContentData(title: "island", artist: "10CM", description: "타이틀만큼 좋은 수록곡 Playlist", DJname: "danborii", fans: "0", listeners: "7", imgName: "mainImgCover10"),
   ContentData(title: "미안해(Feat.Beenzino)", artist: "Zion.T", description: "사과를 할 때는 이 노래를 틀어주세요", DJname: "oe9day", fans: "3", listeners: "84", imgName: "mainImgCover11"),
   ContentData(title: "True Romance", artist: "Citizens!", description: "우리가 사랑했던 🎧OST", DJname: "그대내게햄버거주는사람", fans: "0", listeners: "3", imgName: "mainImgCover12")
-]
+]*/
 var popularContentList: [ContentData] = [
   ContentData(title: "낮잠", artist: "실리카겔", description: "나른한 오후,\n햇살과 어울리는 음악🌞", DJname: "Mez1nee", fans: "35.4K", listeners: "985", imgName: "mainImgCover5"),
   ContentData(title: "19", artist: "뎁트", description: "학창시절을 떠올리게\n하는 하이틴 노래모음", DJname: "효린쓰", fans: "42K", listeners: "593", imgName: "mainImgCover4"),

@@ -57,12 +57,16 @@ class NewTVC: UITableViewCell {
     fanLabel.textColor = .gray3
   }
   
-  func setData(data: ContentData) {
-    descriptionLabel.text = data.description
-    titleAndArtistLabel.text = "\(data.title) - \(data.artist)"
-    nameDJLabel.text = data.DJname
-    numberOfFanLabel.text = data.fans
-    numberOfListenerLabel.text = data.listeners
-    albumImage.image = data.makeImage()
+  func setData(data: MusicHugDetailData) {
+    descriptionLabel.text = data.hugTitle
+    titleAndArtistLabel.text = "\(data.musicTitle) - \(data.artist)"
+    nameDJLabel.text = data.nickname
+    numberOfFanLabel.text = String(data.fanCount)
+    numberOfListenerLabel.text = String(data.listenerCount)
+    let url = URL(string: data.cover ?? "")
+    do {
+      let data = try Data(contentsOf: url!)
+      self.albumImage.image = UIImage(data: data)
+    } catch { }
   }
 }

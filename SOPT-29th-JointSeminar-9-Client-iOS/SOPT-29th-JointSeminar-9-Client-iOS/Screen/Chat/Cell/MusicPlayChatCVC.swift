@@ -43,7 +43,7 @@ class MusicPlayChatCVC: BaseCell {
     }
     
     func bind(data: MusicHugDetailData) {
-        if let url = URL(string: data.cover) {
+      if let url = URL(string: data.cover ?? "") {
             if let imageData = try? Data(contentsOf: url) {
                 musicAlbumCoverImageView.image = UIImage(data: imageData)
             }

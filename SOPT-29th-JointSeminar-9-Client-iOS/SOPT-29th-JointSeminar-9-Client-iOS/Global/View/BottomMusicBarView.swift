@@ -99,7 +99,7 @@ class BottomMusicBarView: UIView {
     }
     
     func bindChatData(data: MusicHugDetailData) {
-        if let url = URL(string: data.cover) {
+        if let url = URL(string: data.cover ?? "") {
             if let imageData = try? Data(contentsOf: url) {
                 albumCoverImageView.image = UIImage(data: imageData)
             }

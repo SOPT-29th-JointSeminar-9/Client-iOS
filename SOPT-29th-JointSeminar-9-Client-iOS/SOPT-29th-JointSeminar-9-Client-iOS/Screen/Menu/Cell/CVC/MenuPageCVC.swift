@@ -17,7 +17,7 @@ class MenuPageCVC: UICollectionViewCell {
   //MARK: - Vars & Lets
 
   var delegate: TVCellDelegate?
-  var numofRoom: String? = String(newContentList.count)
+  var numofRoom: String? = "7"
   private let sections: [String] = ["실시간 인기", "최신"]
   
   //MARK : - UI Component
@@ -137,7 +137,7 @@ extension MenuPageCVC: UITableViewDelegate {
     } else if indexPath.section == 1 {
       switch indexPath.row {
       case 0: //최신
-        return CGFloat(125*newContentList.count)
+        return CGFloat(125*7)
       case 1: //맨위로 버튼
         return 50
       case 2: //여분 공간
