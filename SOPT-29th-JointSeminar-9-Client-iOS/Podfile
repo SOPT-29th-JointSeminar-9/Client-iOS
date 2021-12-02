@@ -7,6 +7,7 @@ target 'SOPT-29th-JointSeminar-9-Client-iOS' do
 
   # Pods for SOPT-29th-JointSeminar-9-Client-iOS
   pod 'Alamofire', '~> 5.4.3'
+  pod 'Moya', '~> 15.0.0'
   pod 'SnapKit', '~> 5.0.1'
   pod 'Then', '~> 2.7.0'
 end

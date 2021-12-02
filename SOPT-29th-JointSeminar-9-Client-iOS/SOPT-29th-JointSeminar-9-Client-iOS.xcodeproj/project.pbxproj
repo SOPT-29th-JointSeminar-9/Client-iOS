@@ -28,6 +28,9 @@
 		3379621A273E31D500E2AD02 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33796219273E31D500E2AD02 /* NetworkResult.swift */; };
 		3379621C273E31F600E2AD02 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379621B273E31F600E2AD02 /* GenericResponse.swift */; };
 		33AADE352744355300D07748 /* MusicHugNaviBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AADE342744355300D07748 /* MusicHugNaviBarView.swift */; };
+		33B24E0127560220008C598F /* MusicHugDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B24E0027560220008C598F /* MusicHugDetailData.swift */; };
+		33B24E04275603A4008C598F /* MusicHugService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B24E03275603A4008C598F /* MusicHugService.swift */; };
+		33B24E0627560E58008C598F /* MusicHugAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B24E0527560E58008C598F /* MusicHugAPI.swift */; };
 		33C0A25C2740233300B6687D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A25B2740233300B6687D /* SearchVC.swift */; };
 		33C0A25F2740236200B6687D /* FolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0A25E2740236200B6687D /* FolderVC.swift */; };
 		33C0A263274023DA00B6687D /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C0A262274023DA00B6687D /* Menu.storyboard */; };
@@ -99,6 +102,9 @@
 		33796219273E31D500E2AD02 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		3379621B273E31F600E2AD02 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		33AADE342744355300D07748 /* MusicHugNaviBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHugNaviBarView.swift; sourceTree = "<group>"; };
+		33B24E0027560220008C598F /* MusicHugDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHugDetailData.swift; sourceTree = "<group>"; };
+		33B24E03275603A4008C598F /* MusicHugService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHugService.swift; sourceTree = "<group>"; };
+		33B24E0527560E58008C598F /* MusicHugAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHugAPI.swift; sourceTree = "<group>"; };
 		33C0A25B2740233300B6687D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		33C0A25E2740236200B6687D /* FolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderVC.swift; sourceTree = "<group>"; };
 		33C0A262274023DA00B6687D /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 		337961FA273E2D4E00E2AD02 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				33B24E0227560372008C598F /* APIEssentials */,
 				337961FB273E2D7B00E2AD02 /* APIModels */,
 				337961FC273E2D8300E2AD02 /* APIServices */,
 			);
@@ -313,6 +320,7 @@
 			children = (
 				3379621B273E31F600E2AD02 /* GenericResponse.swift */,
 				33F15AC62744B49F00B898E4 /* MessageData.swift */,
+				33B24E0027560220008C598F /* MusicHugDetailData.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -320,8 +328,8 @@
 		337961FC273E2D8300E2AD02 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				33796217273E31A600E2AD02 /* APIConstants.swift */,
-				33796219273E31D500E2AD02 /* NetworkResult.swift */,
+				33B24E03275603A4008C598F /* MusicHugService.swift */,
+				33B24E0527560E58008C598F /* MusicHugAPI.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -377,6 +385,15 @@
 				33C0A25E2740236200B6687D /* FolderVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		33B24E0227560372008C598F /* APIEssentials */ = {
+			isa = PBXGroup;
+			children = (
+				33796217273E31A600E2AD02 /* APIConstants.swift */,
+				33796219273E31D500E2AD02 /* NetworkResult.swift */,
+			);
+			path = APIEssentials;
 			sourceTree = "<group>";
 		};
 		33C0A261274023CE00B6687D /* Storyboard */ = {
@@ -626,6 +643,7 @@
 				3379621A273E31D500E2AD02 /* NetworkResult.swift in Sources */,
 				33F15AC92744BB1900B898E4 /* String+.swift in Sources */,
 				6F0D903127460066004ACC8B /* NSObject + reusableIdentifier.swift in Sources */,
+				33B24E0627560E58008C598F /* MusicHugAPI.swift in Sources */,
 				331D3CDF2748B458000CDD88 /* Notification.Name.swift in Sources */,
 				6F3A2BEF2746E853009528FE /* MenuContentData.swift in Sources */,
 				33C0A2742740247D00B6687D /* ChatVC.swift in Sources */,
@@ -636,6 +654,7 @@
 				33C0A291274162C600B6687D /* UILabel+.swift in Sources */,
 				6FCF3155274FADA40075A130 /* NewMenuTVC.swift in Sources */,
 				33796210273E302F00E2AD02 /* GenieTBC.swift in Sources */,
+				33B24E0127560220008C598F /* MusicHugDetailData.swift in Sources */,
 				337961E0273E2B7B00E2AD02 /* AppDelegate.swift in Sources */,
 				33C0A25C2740233300B6687D /* SearchVC.swift in Sources */,
 				33C0A27E2740357300B6687D /* UITabBarController+.swift in Sources */,
@@ -647,6 +666,7 @@
 				3379620B273E2F5F00E2AD02 /* Identifiers.swift in Sources */,
 				33F15AC52744AEC500B898E4 /* BaseCell.swift in Sources */,
 				330FF2812740223700E685BC /* HeartVC.swift in Sources */,
+				33B24E04275603A4008C598F /* MusicHugService.swift in Sources */,
 				33796208273E2F0200E2AD02 /* UIView+.swift in Sources */,
 				33C0A25F2740236200B6687D /* FolderVC.swift in Sources */,
 				33AADE352744355300D07748 /* MusicHugNaviBarView.swift in Sources */,
