@@ -63,7 +63,7 @@ class NewTVC: UITableViewCell {
     nameDJLabel.text = data.nickname
     numberOfFanLabel.text = String(data.fanCount)
     numberOfListenerLabel.text = String(data.listenerCount)
-    let url = URL(string: data.cover ?? "")
+    let url = URL(string: data.cover)
     do {
       let data = try Data(contentsOf: url!)
       self.albumImage.image = UIImage(data: data)

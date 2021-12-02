@@ -10,8 +10,9 @@ struct MusicHugDetailData: Codable {
     let id: Int
     let hugTitle, nickname: String
     let fanCount, listenerCount: Int
-    let sentTime, musicTitle, artist: String?
-    let cover: String?
+    let sentTime: String
+    let musicTitle, artist: String
+    let cover: String
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -33,8 +34,8 @@ struct MusicHugDetailData: Codable {
         fanCount = (try? values.decode(Int.self, forKey: .fanCount)) ?? -1
         listenerCount = (try? values.decode(Int.self, forKey: .listenerCount)) ?? -1
         sentTime = (try? values.decode(String.self, forKey: .sentTime)) ?? ""
-        musicTitle = (try? values.decode(String.self, forKey: .musicTitle)) ?? ""
-        artist = (try? values.decode(String.self, forKey: .artist)) ?? ""
-        cover = (try? values.decode(String.self, forKey: .cover)) ?? ""
+        musicTitle = (try? values.decode(String?.self, forKey: .musicTitle)) ?? "주민이 짱"
+        artist = (try? values.decode(String?.self, forKey: .artist)) ?? "임주민"
+        cover = (try? values.decode(String?.self, forKey: .cover)) ?? "https://firebasestorage.googleapis.com/v0/b/wesopt29-29f3e.appspot.com/o/image%2Fjoint-seminar%2Fwhy_akmu.jpg?alt=media&token=ebb64c21-638e-49b5-8c3c-d03c2f38654c"
     }
 }
