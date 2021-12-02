@@ -19,6 +19,8 @@ class BottomMusicBarView: UIView {
     // MARK: Properties
     private var albumCoverImageView = UIImageView().then {
         $0.image = UIImage(named: "chatImgMusic")
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 5
         $0.contentMode = .scaleAspectFit
     }
     
@@ -73,6 +75,20 @@ class BottomMusicBarView: UIView {
             configureLayoutWhenNormal()
         case .chat:
             print("chat")
+        }
+        self.backgroundColor = .gray6
+    }
+    
+    init(frame: CGRect, state: bottomMusicBarState, model: MusicHugDetailData) {
+        super.init(frame: frame)
+        
+        switch state {
+        case .normal:
+            print("normal")
+            configureLayoutWhenNormal()
+        case .chat:
+            print("chat")
+            bindChatData(data: model)
             configureLayoutWhenChat()
         }
         self.backgroundColor = .gray6
@@ -80,6 +96,16 @@ class BottomMusicBarView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func bindChatData(data: MusicHugDetailData) {
+        if let url = URL(string: data.cover) {
+            if let imageData = try? Data(contentsOf: url) {
+                albumCoverImageView.image = UIImage(data: imageData)
+            }
+        }
+        musicTitleLabel.text = data.musicTitle
+        singerLabel.text = data.artist
     }
 }
 

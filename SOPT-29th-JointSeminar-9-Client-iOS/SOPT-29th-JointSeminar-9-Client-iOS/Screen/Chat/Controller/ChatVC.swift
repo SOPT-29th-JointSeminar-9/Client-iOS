@@ -63,7 +63,7 @@ class ChatVC: UIViewController {
 extension ChatVC {
     // MARK: BottomMusicView init 함수
     func initBottomMusicView() {
-        chatMusicBottomView = BottomMusicBarView(frame: self.view.frame, state: .chat)
+        chatMusicBottomView = BottomMusicBarView(frame: self.view.frame, state: .chat, model: roomChatData[0])
     }
     
     func configueLayout() {
