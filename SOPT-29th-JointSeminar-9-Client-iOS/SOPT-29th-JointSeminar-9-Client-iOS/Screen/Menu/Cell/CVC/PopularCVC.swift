@@ -54,14 +54,18 @@ class PopularCVC: UICollectionViewCell {
         listenersLabel.textColor = .gray3
     }
     
-    func setData(rank: Int, data: ContentData) {
+    func setData(rank: Int, data: MusicHugDetailData) {
         rankLabel.text = "\(rank+1)"
-        albumImageView.image = data.makeImage()
-        titleLabel.text = data.title
+        titleLabel.text = data.musicTitle
         artistLabel.text = data.artist
-        descriptionLabel.text = data.description
-        nameLabel.text = data.DJname
-        numofFanLabel.text = data.fans
-        numofListenersLabel.text = data.listeners
+        descriptionLabel.text = data.hugTitle
+        nameLabel.text = data.nickname
+        numofFanLabel.text = String(data.fanCount)
+        numofListenersLabel.text = String(data.listenerCount)
+        let url = URL(string: data.cover)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.albumImageView.image = UIImage(data: data)
+        } catch { }
     }
 }
