@@ -27,7 +27,7 @@ class NewMenuTVC: UITableViewCell {
   
   //MARK: - Func
   
-  func attributes() {
+  func setupDelegate() {
     tableView.dataSource = self
     tableView.delegate = self
   }
@@ -57,7 +57,7 @@ extension NewMenuTVC: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newTVC, for: indexPath) as? NewTVC else {
         return UITableViewCell()
     }
-    cell.setData(data: newData[10])
+    cell.setData(data: newData[indexPath.row+58])
     cell.selectionStyle = .none
     return cell
   }
@@ -69,10 +69,9 @@ extension NewMenuTVC {
     MusicHugAPI.shared.getDataNewAPI() { [self] networkResult in
       switch networkResult {
       case .success(let res):
-        if let data = res as? MusicHugDetailData {
-          print("data: ", data)
-          self.newData = [data]
-          attributes()
+        if let data = res as? [MusicHugDetailData] {
+          self.newData = data
+          setupDelegate()
           registerXib()
           print("success")
           tableView.reloadData()
