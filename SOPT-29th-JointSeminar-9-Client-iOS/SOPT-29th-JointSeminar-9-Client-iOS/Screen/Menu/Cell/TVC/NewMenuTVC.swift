@@ -13,7 +13,6 @@ class NewMenuTVC: UITableViewCell {
   
   @IBOutlet weak var tableView: UITableView!
   var newData: [MusicHugDetailData] = []
-  var tmpData: [MusicHugDetailData] = []
   
   //MARK: - Life Cycle
   
@@ -58,7 +57,7 @@ extension NewMenuTVC: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newTVC, for: indexPath) as? NewTVC else {
         return UITableViewCell()
     }
-    cell.setData(data: newData[indexPath.row+58])
+    cell.setData(data: newData[10])
     cell.selectionStyle = .none
     return cell
   }
@@ -70,13 +69,12 @@ extension NewMenuTVC {
     MusicHugAPI.shared.getDataNewAPI() { [self] networkResult in
       switch networkResult {
       case .success(let res):
-        print("success1")
-        if let data = res as? [MusicHugDetailData] {
-          print("success2")
-          self.newData = data
+        if let data = res as? MusicHugDetailData {
+          print("data: ", data)
+          self.newData = [data]
           attributes()
           registerXib()
-    
+          print("success")
           tableView.reloadData()
         }
       case .requestErr(let msg):
