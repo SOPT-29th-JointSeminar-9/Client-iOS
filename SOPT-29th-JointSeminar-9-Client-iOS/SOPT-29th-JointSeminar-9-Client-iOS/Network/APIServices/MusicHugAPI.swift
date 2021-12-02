@@ -58,7 +58,7 @@ class MusicHugAPI {
             let statusCode = response.statusCode
             let data = response.data
             
-            completion(getDetailMusicHugJudgeData(status: statusCode, data: data))
+            completion(getHomeMusicHugJudgeData(status: statusCode, data: data))
             
         case .failure(let err):
           print(err)
@@ -97,7 +97,24 @@ class MusicHugAPI {
         
         switch status {
         case 200:
-          print("data?: ", decodedData.data)
+            return .success(decodedData.data ?? "None-Data")
+        case 400...500:
+            return .requestErr(decodedData.message)
+        case 500:
+            return .serverErr
+        default:
+            return .networkFail
+        }
+    }
+    
+    /// 뮤직허그 홈 정보 조회 JudgeData
+    func getHomeMusicHugJudgeData(status: Int, data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        guard let decodedData = try? decoder.decode(GenericResponse<[MusicHugDetailData]>.self, from: data) else {
+            return .pathErr }
+        
+        switch status {
+        case 200:
             return .success(decodedData.data ?? "None-Data")
         case 400...500:
             return .requestErr(decodedData.message)

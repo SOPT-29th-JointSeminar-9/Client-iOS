@@ -69,9 +69,8 @@ extension NewMenuTVC {
     MusicHugAPI.shared.getDataNewAPI() { [self] networkResult in
       switch networkResult {
       case .success(let res):
-        print("data?: ", res)
         if let data = res as? MusicHugDetailData {
-          print("data?: ", data)
+          print("data: ", data)
           self.newData = [data]
           attributes()
           registerXib()
