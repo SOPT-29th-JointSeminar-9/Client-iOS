@@ -12,14 +12,13 @@ class NewMenuTVC: UITableViewCell {
   //MARK: - UI Component
   
   @IBOutlet weak var tableView: UITableView!
+  var newData: [MusicHugDetailData] = []
   
   //MARK: - Life Cycle
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    registerXib()
-    tableView.dataSource = self
-    tableView.delegate = self
+    requestNewData()
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +26,11 @@ class NewMenuTVC: UITableViewCell {
   }
   
   //MARK: - Func
+  
+  func attributes() {
+    tableView.dataSource = self
+    tableView.delegate = self
+  }
   
   func registerXib() {
     let xibName = UINib(nibName: Identifiers.newTVC, bundle: nil)
@@ -46,16 +50,47 @@ extension NewMenuTVC: UITableViewDelegate {
 
 extension NewMenuTVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return newContentList.count
+    return 7
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.newTVC, for: indexPath) as? NewTVC else {
         return UITableViewCell()
     }
-    cell.setData(data: newContentList[indexPath.row])
+    cell.setData(data: newData[10])
     cell.selectionStyle = .none
     return cell
   }
 }
+
+//MARK: - Network
+extension NewMenuTVC {
+  func requestNewData() {
+    MusicHugAPI.shared.getDataNewAPI() { [self] networkResult in
+      switch networkResult {
+      case .success(let res):
+        print("data?: ", res)
+        if let data = res as? MusicHugDetailData {
+          print("data?: ", data)
+          self.newData = [data]
+          attributes()
+          registerXib()
+          print("success")
+          tableView.reloadData()
+        }
+      case .requestErr(let msg):
+        if let message = msg as? String {
+          print(message)
+        }
+      case .pathErr:
+        print("pathErr")
+      case .serverErr:
+        print("serverErr")
+      case .networkFail:
+        print("networkFail")
+      }
+    }
+  }
+}
+  
 
