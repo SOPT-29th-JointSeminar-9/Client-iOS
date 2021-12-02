@@ -54,6 +54,7 @@ class MusicHugAPI {
     
     
     //MARK: judgeData
+    ///  뮤직허그 방 생성 JudgeData
     func createMusicHugJudgeData(status: Int, data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GenericResponse<String>.self, from: data) else {
@@ -71,6 +72,7 @@ class MusicHugAPI {
         }
     }
     
+    /// 뮤직허그 세부 정보 조회 JudgeData
     func getDetailMusicHugJudgeData(status: Int, data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GenericResponse<MusicHugDetailData>.self, from: data) else {

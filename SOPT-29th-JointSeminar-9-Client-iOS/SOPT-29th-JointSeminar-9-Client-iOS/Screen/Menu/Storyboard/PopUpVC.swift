@@ -86,29 +86,6 @@ extension PopUpVC {
                 if let message = msg as? String {
                     print(message)
                 }
-                print("success")
-            case .requestErr(let msg):
-                if let message = msg as? String {
-                    print(message)
-                }
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
-    }
-    
-    func requestGetDetailMusicHug() {
-        MusicHugAPI.shared.getDetailMusicHugAPI(hugID: "1") { networkResult in
-            switch networkResult {
-            case .success(let res):
-                if let data = res as? MusicHugDetailData {
-                    print(data)
-                }
-                print("success")
             case .requestErr(let msg):
                 if let message = msg as? String {
                     print(message)
