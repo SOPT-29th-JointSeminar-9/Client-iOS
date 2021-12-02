@@ -13,6 +13,7 @@ class ChatVC: UIViewController {
     
     //MARK: Properties
     var roomTitle: String?
+    var roomChatData: [MusicHugDetailData] = []
     private var chatNC = MusicHugNaviBarView()
     private var chatCV = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         let layout = UICollectionViewFlowLayout()
@@ -26,6 +27,7 @@ class ChatVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestGetDetailMusicHug()
         setupDelegate()
         setNaviRoomTitle()
         registerCell()
@@ -61,7 +63,7 @@ class ChatVC: UIViewController {
 extension ChatVC {
     // MARK: BottomMusicView init 함수
     func initBottomMusicView() {
-        chatMusicBottomView = BottomMusicBarView(frame: self.view.frame, state: .chat)
+        chatMusicBottomView = BottomMusicBarView(frame: self.view.frame, state: .chat, model: roomChatData[0])
     }
     
     func configueLayout() {
@@ -103,7 +105,7 @@ extension ChatVC: UICollectionViewDataSource {
             return 1
         }
         else {
-            return musicHugChatData.count
+            return roomChatData.count
         }
     }
     
@@ -114,34 +116,41 @@ extension ChatVC: UICollectionViewDataSource {
         }
         else {
             //뮤직 cell
-            if musicHugChatData[indexPath.row].chatType == .music {
-                print("music")
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.musicPlayChatCVC, for: indexPath)
-                if let musicPlayChatCell = cell as? MusicPlayChatCVC {
-                    musicPlayChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                }
-                return cell
+            // 클라 코드 ..
+//            if musicHugChatData[indexPath.row].chatType == .music {
+//                print("music")
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.musicPlayChatCVC, for: indexPath)
+//                if let musicPlayChatCell = cell as? MusicPlayChatCVC {
+//                    musicPlayChatCell.setupViews(model: musicHugChatData[indexPath.row])
+//                }
+//                return cell
+//            }
+//            //상대방 chat cell
+//            else if musicHugChatData[indexPath.row].chatType == .counterpart {
+//                print("counterpart")
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.counterpartChatCVC, for: indexPath)
+//                if let counterpartChatCell = cell as? CounterpartChatCVC {
+//                    counterpartChatCell.setupViews(model: musicHugChatData[indexPath.row])
+//                    counterpartChatCell.couterpartTextLabel.adjustsFontSizeToFitWidth = true
+//                }
+//                return cell
+//
+//            }
+//            //본인 chat cell
+//            else {
+//                print("me")
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.mychatCVC, for: indexPath)
+//                if let myChatCell = cell as? MyChatCVC {
+//                    myChatCell.setupViews(model: musicHugChatData[indexPath.row])
+//                }
+//                return cell
+//            }
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.musicPlayChatCVC, for: indexPath)
+            if let musicPlayChatCell = cell as? MusicPlayChatCVC {
+                musicPlayChatCell.setupViews(model: roomChatData[indexPath.row])
             }
-            //상대방 chat cell
-            else if musicHugChatData[indexPath.row].chatType == .counterpart {
-                print("counterpart")
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.counterpartChatCVC, for: indexPath)
-                if let counterpartChatCell = cell as? CounterpartChatCVC {
-                    counterpartChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                    counterpartChatCell.couterpartTextLabel.adjustsFontSizeToFitWidth = true
-                }
-                return cell
-                
-            }
-            //본인 chat cell
-            else {
-                print("me")
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.mychatCVC, for: indexPath)
-                if let myChatCell = cell as? MyChatCVC {
-                    myChatCell.setupViews(model: musicHugChatData[indexPath.row])
-                }
-                return cell
-            }
+            return cell
         }
     }
 }
@@ -208,6 +217,32 @@ extension ChatVC {
     func setNaviRoomTitle() {
         if let text = roomTitle {
             chatNC.setNaviRoomTitle(roomTitle: text)
+        }
+    }
+}
+
+//MARK: - Network
+extension ChatVC {
+    func requestGetDetailMusicHug() {
+        MusicHugAPI.shared.getDetailMusicHugAPI(hugID: "1") { networkResult in
+            switch networkResult {
+            case .success(let res):
+                if let data = res as? MusicHugDetailData {
+                    self.roomChatData = [data]
+                    self.chatCV.reloadData()
+                }
+                print("success")
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                    print(message)
+                }
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
     }
 }
