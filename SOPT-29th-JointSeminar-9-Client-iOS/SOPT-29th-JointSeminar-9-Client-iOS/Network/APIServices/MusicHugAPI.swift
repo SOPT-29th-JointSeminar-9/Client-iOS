@@ -49,26 +49,33 @@ class MusicHugAPI {
         }
     }
     
-  /// 최신순
+  /// [GET] 최신순
   func getDataNewAPI(completion: @escaping (NetworkResult<Any>) -> (Void)) {
     userProvider.request(.getMusicHugNewestData) { [self] result in
-        switch result {
-        
-        case .success(let response):
-            let statusCode = response.statusCode
-            let data = response.data
-            
-            completion(getHomeMusicHugJudgeData(status: statusCode, data: data))
-            
-        case .failure(let err):
-          print(err)
-        }
+      switch result {
+      case .success(let response):
+        let statusCode = response.statusCode
+        let data = response.data
+        completion(getHomeMusicHugJudgeData(status: statusCode, data: data))
+      case .failure(let err):
+        print(err)
+      }
     }
   }
   
-  /// 인기순 API
-
-    
+  /// [GET] 인기순
+  func getDataNowPopularAPI(completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    userProvider.request(.getMusicHugPopularData) { [self] result in
+      switch result {
+      case .success(let response):
+        let statusCode = response.statusCode
+        let data = response.data
+        completion(getHomeMusicHugJudgeData(status: statusCode, data: data))
+      case .failure(let err):
+        print(err)
+      }
+    }
+  }
     
     //MARK: judgeData
     ///  뮤직허그 방 생성 JudgeData
